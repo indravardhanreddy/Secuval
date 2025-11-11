@@ -1,0 +1,107 @@
+[package]
+name = "secureapis"
+version = "0.1.0"
+edition = "2021"
+authors = ["SecureAPIs Contributors"]
+description = "High-performance API security middleware layer for vulnerability protection and penetration testing defense"
+license = "MIT"
+repository = "https://github.com/secureapis/secureapis"
+keywords = ["security", "api", "middleware", "vulnerability", "protection"]
+categories = ["web-programming", "authentication", "cryptography"]
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+
+# Web frameworks support
+axum = { version = "0.7", optional = true }
+actix-web = { version = "4.4", optional = true }
+
+# Security & Crypto
+sha2 = "0.10"
+hmac = "0.12"
+jsonwebtoken = "9.2"
+argon2 = "0.5"
+rand = "0.8"
+aes-gcm = "0.10"
+
+# Rate limiting & caching
+dashmap = "5.5"
+governor = "0.6"
+
+# Validation & Parsing
+regex = "1.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+url = "2.5"
+
+# Monitoring & Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+metrics = "0.21"
+
+# Performance
+parking_lot = "0.12"
+ahash = "0.8"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# HTTP utilities
+http = "1.0"
+bytes = "1.5"
+uuid = { version = "1.6", features = ["v4", "serde"] }
+
+[dev-dependencies]
+criterion = "0.5"
+tokio-test = "0.4"
+futures = "0.3"
+urlencoding = "2.1"
+reqwest = { version = "0.11", features = ["json"] }
+
+[features]
+default = ["axum-support"]
+axum-support = ["axum"]
+actix-support = ["actix-web"]
+full = ["axum-support", "actix-support"]
+
+[[bench]]
+name = "security_benchmarks"
+harness = false
+
+[[example]]
+name = "simple_example"
+
+[[example]]
+name = "complete_example"
+
+[[example]]
+name = "production_setup"
+
+[[example]]
+name = "jwt_auth"
+
+[[example]]
+name = "security_features"
+
+[[example]]
+name = "blocked_request_tracking"
+
+[[example]]
+name = "stress_test_example"
+
+[[example]]
+name = "live_monitor"
+
+[[example]]
+name = "ui_dashboard"
+
+[[example]]
+name = "complete_ui_integration"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
