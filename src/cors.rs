@@ -126,12 +126,23 @@ impl CorsEnforcer {
             return true;
         }
 
-        // Wildcard subdomain matching (e.g., *.example.com)
+        // Wildcard subdomain matching (e.g., *.example.com or https://*.example.com)
         for allowed in &self.allowed_origins {
-            if allowed.starts_with("*.") {
-                let domain = allowed.trim_start_matches("*.");
-                if origin.ends_with(domain) && (origin.ends_with(&allowed[1..]) || origin == &allowed[2..]) {
-                    return true;
+            if allowed.contains("*.") {
+                // Handle wildcard patterns like https://*.example.com
+                if let Some(wildcard_pos) = allowed.find("*.") {
+                    let prefix = &allowed[..wildcard_pos]; // e.g., "https://"
+                    let suffix = &allowed[wildcard_pos + 2..]; // e.g., "example.com"
+
+                    // Check if origin starts with the prefix and ends with the suffix
+                    if origin.starts_with(prefix) && origin.ends_with(suffix) {
+                        let middle_part = &origin[prefix.len()..origin.len() - suffix.len()];
+                        // Make sure there's something in the middle (not empty)
+                        // For subdomains, middle part should be like "subdomain." 
+                        if !middle_part.is_empty() && middle_part.len() > 1 {
+                            return true;
+                        }
+                    }
                 }
             }
         }

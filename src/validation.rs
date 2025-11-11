@@ -71,6 +71,11 @@ impl InputValidator {
 
         // Validate query parameters
         if let Some(query) = request.uri().query() {
+            // URL-decode query parameters for validation
+            if let Ok(decoded_query) = urlencoding::decode(query) {
+                self.validate_string(&decoded_query, "query", context)?;
+            }
+            // Also check the raw query string in case of mixed encoding attacks
             self.validate_string(query, "query", context)?;
         }
 
@@ -158,6 +163,21 @@ impl InputValidator {
             Regex::new(r"(?i)\bunion.+select").unwrap(),
             // Drop table: '; DROP
             Regex::new(r"(?i)drop\s+(table|database)").unwrap(),
+            // Common SQL injection patterns
+            Regex::new(r"(?i)'\s*or\s+'?\d+'?\s*=\s*'?\d+").unwrap(), // ' OR '1'='1
+            Regex::new(r"(?i)'\s*or\s+'?\w+'\s*=\s*'?\w+").unwrap(), // ' OR 'a'='a
+            Regex::new(r"(?i);?\s*--").unwrap(), // SQL comments
+            Regex::new(r"(?i);?\s*#").unwrap(), // MySQL comments
+            Regex::new(r"(?i)\/\*\*\/").unwrap(), // /**/ comments
+            Regex::new(r"(?i)'\s*;\s*drop").unwrap(), // '; DROP
+            Regex::new(r"(?i)'\s*;\s*select").unwrap(), // '; SELECT
+            Regex::new(r"(?i)exec\s*\(").unwrap(), // exec(
+            Regex::new(r"(?i)execute\s*\(").unwrap(), // execute(
+            Regex::new(r"(?i)xp_cmdshell").unwrap(), // xp_cmdshell
+            Regex::new(r"(?i)sp_executesql").unwrap(), // sp_executesql
+            Regex::new(r"(?i)information_schema").unwrap(), // information_schema
+            Regex::new(r"(?i)sysobjects").unwrap(), // sysobjects
+            Regex::new(r"(?i)syscolumns").unwrap(), // syscolumns
         ]
     }
 
@@ -167,7 +187,27 @@ impl InputValidator {
             // Script tags
             Regex::new(r"(?i)<script").unwrap(),
             // Event handlers
-            Regex::new(r"(?i)on(click|error|load)\s*=").unwrap(),
+            Regex::new(r"(?i)on(click|error|load|mouseover|mouseout|keydown|keyup|keypress|submit|change|focus|blur)\s*=").unwrap(),
+            // JavaScript URLs
+            Regex::new(r"(?i)javascript:").unwrap(),
+            // VBscript URLs
+            Regex::new(r"(?i)vbscript:").unwrap(),
+            // Data URLs that might contain scripts
+            Regex::new(r"(?i)data:text/html").unwrap(),
+            // Iframe tags
+            Regex::new(r"(?i)<iframe").unwrap(),
+            // Object/embed tags
+            Regex::new(r"(?i)<(object|embed)").unwrap(),
+            // Meta refresh with javascript
+            Regex::new(r"(?i)<meta.*url=javascript").unwrap(),
+            // Style with expression (IE)
+            Regex::new(r"(?i)expression\s*\(").unwrap(),
+            // Style with javascript
+            Regex::new(r"(?i)javascript:\s*expression").unwrap(),
+            // img onerror and similar
+            Regex::new(r"(?i)<img[^>]*\bonerror\s*=").unwrap(),
+            // Link with javascript
+            Regex::new(r"(?i)<link[^>]*\shref\s*=\s*javascript:").unwrap(),
         ]
     }
 
@@ -175,15 +215,58 @@ impl InputValidator {
     fn build_command_patterns() -> Vec<Regex> {
         vec![
             // Semicolon + shell command
-            Regex::new(r";\s*(/bin|/usr)").unwrap(),
+            Regex::new(r";\s*(/bin|/usr|/sbin)").unwrap(),
+            // Semicolon + common commands
+            Regex::new(r";\s*(rm|ls|cat|echo|wget|curl|nc|netcat|nmap|ping)").unwrap(),
+            // Pipe operators
+            Regex::new(r"\|\s*(/bin|/usr|/sbin)").unwrap(),
+            Regex::new(r"\|\s*(rm|ls|cat|echo|wget|curl|nc|netcat|nmap|ping)").unwrap(),
+            // Logical operators
+            Regex::new(r"(&&|\|\|)\s*(/bin|/usr|/sbin)").unwrap(),
+            Regex::new(r"(&&|\|\|)\s*(rm|ls|cat|echo|wget|curl|nc|netcat|nmap|ping)").unwrap(),
+            // Command substitution
+            Regex::new(r"`[^`]*`").unwrap(),
+            Regex::new(r"\$\([^)]*\)").unwrap(),
+            // Redirection
+            Regex::new(r"[<>]\s*(/etc|/proc|/home|/root|/var)").unwrap(),
+            // Common injection patterns
+            Regex::new(r";\s*rm\s").unwrap(),
+            Regex::new(r";\s*cat\s").unwrap(),
+            Regex::new(r";\s*wget\s").unwrap(),
+            Regex::new(r";\s*curl\s").unwrap(),
+            // Null byte injection
+            Regex::new(r"%00").unwrap(),
+            Regex::new(r"\\x00").unwrap(),
         ]
     }
 
     // Path traversal patterns
     fn build_path_traversal_patterns() -> Vec<Regex> {
         vec![
-            // Multiple ../ in sequence
+            // Multiple ../ in sequence (Unix/Linux)
             Regex::new(r"(\.\./){2,}").unwrap(),
+            // Multiple ..\ in sequence (Windows)
+            Regex::new(r"(\.\.\\){2,}").unwrap(),
+            // Mixed separators
+            Regex::new(r"(\.\.[/\\]){2,}").unwrap(),
+            // URL encoded
+            Regex::new(r"%2e%2e[/\\]").unwrap(),
+            Regex::new(r"%2e%2e%2f").unwrap(),
+            Regex::new(r"%2e%2e%5c").unwrap(),
+            // Double encoded
+            Regex::new(r"%252e%252e").unwrap(),
+            // Absolute paths that shouldn't be in user input
+            Regex::new(r"/etc/").unwrap(),
+            Regex::new(r"/proc/").unwrap(),
+            Regex::new(r"/home/").unwrap(),
+            Regex::new(r"/root/").unwrap(),
+            Regex::new(r"/var/").unwrap(),
+            Regex::new(r"\\windows\\").unwrap(),
+            Regex::new(r"\\system32\\").unwrap(),
+            Regex::new(r"c:\\").unwrap(),
+            // Encoded absolute paths
+            Regex::new(r"%2fetc%2f").unwrap(),
+            Regex::new(r"%5cwindows%5c").unwrap(),
         ]
     }
 

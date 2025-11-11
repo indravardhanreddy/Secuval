@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nothing", "node_modules\node-addon-api\nothing.vcxproj", "{81A3FB59-B163-91E7-C700-1558073255C5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "secureapis", "secureapis.vcxproj", "{2E52D7D3-69E3-9D38-2459-CC5C26F5821D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{81A3FB59-B163-91E7-C700-1558073255C5} = {81A3FB59-B163-91E7-C700-1558073255C5}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(node_modules)", "..\node_modules", "{9D350B9E-06FB-960D-859F-B43C9597383A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(node-addon-api)", "..\node_modules\node-addon-api", "{AF891C37-E709-9CCC-0D50-0CCCC8CCC563}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E52D7D3-69E3-9D38-2459-CC5C26F5821D}.Release|x64.ActiveCfg = Release|x64
+		{2E52D7D3-69E3-9D38-2459-CC5C26F5821D}.Release|x64.Build.0 = Release|x64
+		{2E52D7D3-69E3-9D38-2459-CC5C26F5821D}.Debug|x64.ActiveCfg = Debug|x64
+		{2E52D7D3-69E3-9D38-2459-CC5C26F5821D}.Debug|x64.Build.0 = Debug|x64
+		{81A3FB59-B163-91E7-C700-1558073255C5}.Release|x64.ActiveCfg = Release|x64
+		{81A3FB59-B163-91E7-C700-1558073255C5}.Release|x64.Build.0 = Release|x64
+		{81A3FB59-B163-91E7-C700-1558073255C5}.Debug|x64.ActiveCfg = Debug|x64
+		{81A3FB59-B163-91E7-C700-1558073255C5}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF891C37-E709-9CCC-0D50-0CCCC8CCC563} = {9D350B9E-06FB-960D-859F-B43C9597383A}
+		{81A3FB59-B163-91E7-C700-1558073255C5} = {AF891C37-E709-9CCC-0D50-0CCCC8CCC563}
+	EndGlobalSection
+EndGlobal

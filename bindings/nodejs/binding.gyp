@@ -3,8 +3,7 @@
     {
       "target_name": "secureapis",
       "sources": [
-        "src/secureapis.cc",
-        "src/worker.cc"
+        "src/secureapis.cc"
       ],
       "include_dirs": [
         "<!@(node -p \"require('node-addon-api').include\")"
@@ -34,7 +33,7 @@
         }],
         ["OS=='win'", {
           "libraries": [
-            "../../target/release/secureapis.lib"
+            "../../target/release/secureapis.dll.lib"
           ],
           "library_dirs": [
             "../../target/release"

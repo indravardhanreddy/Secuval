@@ -130,19 +130,25 @@ impl ErrorHandler {
     /// Sanitize error message to prevent information disclosure
     pub fn sanitize_error_message(message: &str) -> String {
         // Remove sensitive paths and file information
-        let sanitized = message
+        let mut sanitized = message
             .replace(
                 std::path::MAIN_SEPARATOR_STR,
                 "/",
             )
             .replace('\\', "/");
 
-        // Remove absolute paths
-        let re = regex::Regex::new(r"(?i)([a-z]:/|/[a-z]{1}/)").unwrap_or_else(|_| {
-            regex::Regex::new(r"").unwrap()
-        });
-        
-        re.replace_all(&sanitized, "/").to_string()
+        // Remove absolute paths like C:/, /home/, /Users/
+        let path_patterns = vec![
+            regex::Regex::new(r"(?i)[a-z]:/[^/\s]*").unwrap(), // C:/Users
+            regex::Regex::new(r"/(?:home|Users|user|usr|var|etc|root|opt)/[^/\s]*").unwrap(), // /home/user
+            regex::Regex::new(r"(?i)\b(?:home|Users|user|usr|var|etc|root|opt)\b").unwrap(), // directory names
+        ];
+
+        for pattern in path_patterns {
+            sanitized = pattern.replace_all(&sanitized, "[REDACTED]").to_string();
+        }
+
+        sanitized
     }
 
     /// Generic error message for production

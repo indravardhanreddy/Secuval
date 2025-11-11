@@ -4,7 +4,7 @@
 //! Used for creating language bindings (C#, Java, Node.js, etc.)
 
 use crate::config::SecurityConfig;
-use crate::core::{SecurityLayer, SecurityResult};
+use crate::core::SecurityLayer;
 use std::ffi::{CStr, CString};
 use std::os::raw::c_char;
 use std::ptr;

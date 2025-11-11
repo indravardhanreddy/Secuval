@@ -13,7 +13,7 @@ async fn test_rate_limiting_integration() {
 
     // First 5 requests should succeed
     for i in 0..5 {
-        let request = Request::builder()
+        let request: Request<Vec<u8>> = Request::builder()
             .uri("/api/test")
             .header("x-forwarded-for", client_ip)
             .body(vec![])
@@ -24,7 +24,7 @@ async fn test_rate_limiting_integration() {
     }
 
     // 6th request should be rate limited
-    let request = Request::builder()
+    let request: Request<Vec<u8>> = Request::builder()
         .uri("/api/test")
         .header("x-forwarded-for", client_ip)
         .body(vec![])
@@ -53,8 +53,8 @@ async fn test_sql_injection_detection() {
     ];
 
     for input in malicious_inputs {
-        let request = Request::builder()
-            .uri(format!("/api/user?id={}", input))
+        let request: Request<Vec<u8>> = Request::builder()
+            .uri(format!("/api/user?id={}", urlencoding::encode(input)))
             .body(vec![])
             .unwrap();
 
@@ -76,7 +76,7 @@ async fn test_xss_detection() {
     ];
 
     for input in xss_inputs {
-        let request = Request::builder()
+        let request: Request<Vec<u8>> = Request::builder()
             .uri(format!("/api/comment?text={}", urlencoding::encode(input)))
             .body(vec![])
             .unwrap();
@@ -105,7 +105,7 @@ async fn test_jwt_authentication() {
     let layer = SecurityLayer::new(config);
 
     // Request with valid token
-    let request = Request::builder()
+    let request: Request<Vec<u8>> = Request::builder()
         .uri("/api/protected")
         .header("authorization", format!("Bearer {}", token))
         .body(vec![])
@@ -132,8 +132,8 @@ async fn test_path_traversal_detection() {
     ];
 
     for path in malicious_paths {
-        let request = Request::builder()
-            .uri(format!("/api/file?path={}", path))
+        let request: Request<Vec<u8>> = Request::builder()
+            .uri(format!("/api/file?path={}", urlencoding::encode(path)))
             .body(vec![])
             .unwrap();
 
@@ -155,7 +155,7 @@ async fn test_command_injection_detection() {
     ];
 
     for cmd in malicious_commands {
-        let request = Request::builder()
+        let request: Request<Vec<u8>> = Request::builder()
             .uri(format!("/api/process?file={}", urlencoding::encode(cmd)))
             .body(vec![])
             .unwrap();
@@ -178,7 +178,7 @@ async fn test_valid_requests_pass_through() {
     ];
 
     for uri in valid_requests {
-        let request = Request::builder()
+        let request: Request<Vec<u8>> = Request::builder()
             .uri(uri)
             .body(vec![])
             .unwrap();
@@ -201,7 +201,7 @@ async fn test_concurrent_requests() {
     for i in 0..50 {
         let layer = layer.clone();
         let handle = task::spawn(async move {
-            let request = Request::builder()
+            let request: Request<Vec<u8>> = Request::builder()
                 .uri("/api/test")
                 .header("x-forwarded-for", format!("192.168.1.{}", i % 10))
                 .body(vec![])

@@ -41,6 +41,8 @@ impl SecurityConfig {
     pub fn with_rate_limit(mut self, requests: u32, window_secs: u64) -> Self {
         self.rate_limit.requests_per_window = requests;
         self.rate_limit.window_duration = Duration::from_secs(window_secs);
+        self.rate_limit.burst_size = requests; // Set burst size to match requests per window
+        self.rate_limit.enabled = true;
         self
     }
 

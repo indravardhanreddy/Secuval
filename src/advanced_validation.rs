@@ -124,14 +124,20 @@ impl AdvancedValidator {
     // NoSQL injection patterns
     fn build_nosql_patterns() -> Vec<Regex> {
         vec![
-            // MongoDB operators
-            Regex::new(r#"[{,]\s*\$[a-z]+\s*:"#).unwrap(),
+            // MongoDB operators - more flexible matching
+            Regex::new(r#"["']?\s*\$[a-zA-Z_][a-zA-Z0-9_]*\s*["']?\s*:"#).unwrap(),
+            // $where operator specifically
+            Regex::new(r#"(?i)["']?\s*\$where\s*["']?\s*:"#).unwrap(),
+            // $regex operator
+            Regex::new(r#"(?i)["']?\s*\$regex\s*["']?\s*:"#).unwrap(),
+            // $ne, $gt, $lt, etc.
+            Regex::new(r#"(?i)["']?\s*\$(ne|gt|gte|lt|lte|in|nin|exists|type)\s*["']?\s*:"#).unwrap(),
             // JavaScript injection in NoSQL
-            Regex::new(r"(?i)\{\s*\$where").unwrap(),
-            // Regex injection
-            Regex::new(r"(?i)\{.*\$regex").unwrap(),
+            Regex::new(r"(?i)\$where\s*:\s*function").unwrap(),
             // Array-based injection
             Regex::new(r"(?i)\[\s*\$").unwrap(),
+            // Constructor injection
+            Regex::new(r"(?i)(constructor|__proto__|prototype)").unwrap(),
         ]
     }
 
