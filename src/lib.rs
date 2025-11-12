@@ -24,8 +24,8 @@ pub mod request_constraints;
 pub mod method_validator;
 pub mod cookie_security;
 pub mod replay_protection;
-// pub mod integrations; // Temporarily disabled due to threading issues
-pub mod ffi; // Foreign Function Interface for language bindings
+pub mod blocked_requests;
+pub mod api;
 
 // Re-exports for convenience
 pub use config::{SecurityConfig, RateLimitConfig, ValidationConfig, AuthConfig};

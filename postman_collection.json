@@ -1,0 +1,309 @@
+{
+  "info": {
+    "name": "SecureAPIs Security Testing",
+    "description": "Comprehensive security testing collection for SecureAPIs Rust server",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:3000",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Basic Connectivity Tests",
+      "item": [
+        {
+          "name": "Root Endpoint",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": ["/"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Public API Endpoint",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/public",
+              "host": ["{{base_url}}"],
+              "path": ["api", "public"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2. Authentication Tests",
+      "item": [
+        {
+          "name": "Protected Endpoint - No Auth",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/data",
+              "host": ["{{base_url}}"],
+              "path": ["api", "data"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Protected Endpoint - Invalid Token",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer invalid.jwt.token"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/data",
+              "host": ["{{base_url}}"],
+              "path": ["api", "data"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3. Input Validation Tests",
+      "item": [
+        {
+          "name": "Create User - Normal Input",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser\",\n  \"email\": \"test@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/user",
+              "host": ["{{base_url}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - XSS Attempt",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"<script>alert('xss')</script>\",\n  \"email\": \"test@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/user",
+              "host": ["{{base_url}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - SQL Injection Attempt",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin' OR '1'='1\",\n  \"email\": \"test@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/user",
+              "host": ["{{base_url}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create User - Command Injection Attempt",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser; cat /etc/passwd\",\n  \"email\": \"test@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/user",
+              "host": ["{{base_url}}"],
+              "path": ["api", "user"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "4. Rate Limiting Tests",
+      "item": [
+        {
+          "name": "Rate Limit Test - Multiple Requests",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/public",
+              "host": ["{{base_url}}"],
+              "path": ["api", "public"]
+            }
+          },
+          "response": []
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "// Rate limiting test - this will be run multiple times",
+              "console.log('Testing rate limiting - Request #' + pm.info.iteration);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Security Headers Check",
+      "item": [
+        {
+          "name": "Check Security Headers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": ["{{base_url}}"],
+              "path": ["/"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "exec": [
+          "// Global test script for all requests",
+          "",
+          "// Test: Response should not be server error",
+          "pm.test(\"Server is responding\", function () {",
+          "    pm.response.to.not.be.serverError;",
+          "});",
+          "",
+          "// Test: Response time should be reasonable",
+          "pm.test(\"Response time is less than 2000ms\", function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(2000);",
+          "});",
+          "",
+          "// Test: Check for basic security headers",
+          "pm.test(\"Has X-Content-Type-Options header\", function () {",
+          "    pm.response.to.have.header(\"X-Content-Type-Options\");",
+          "});",
+          "",
+          "pm.test(\"Has X-Frame-Options header\", function () {",
+          "    pm.response.to.have.header(\"X-Frame-Options\");",
+          "});",
+          "",
+          "// Test: Check for CORS headers",
+          "pm.test(\"Has CORS headers\", function () {",
+          "    pm.response.to.have.header(\"Access-Control-Allow-Origin\");",
+          "});",
+          "",
+          "// Test: Rate limiting detection",
+          "if (pm.response.code === 429) {",
+          "    pm.test(\"Rate limiting is working\", function () {",
+          "        pm.expect(pm.response.code).to.eql(429);",
+          "    });",
+          "    console.log('✅ Rate limiting detected - security working!');",
+          "}",
+          "",
+          "// Test: Authentication check",
+          "if (pm.response.code === 401) {",
+          "    pm.test(\"Authentication required for protected endpoints\", function () {",
+          "        pm.expect(pm.response.code).to.eql(401);",
+          "    });",
+          "    console.log('✅ Authentication working - protected endpoint secured!');",
+          "}",
+          "",
+          "// Test: Input validation - check if malicious input was blocked",
+          "if (pm.info.requestName.includes('XSS') || pm.info.requestName.includes('SQL') || pm.info.requestName.includes('Command')) {",
+          "    if (pm.response.code === 400 || pm.response.code === 422) {",
+          "        pm.test(\"Malicious input blocked\", function () {",
+          "            pm.expect(pm.response.code).to.be.oneOf([400, 422]);",
+          "        });",
+          "        console.log('✅ Input validation working - malicious input blocked!');",
+          "    }",
+          "}",
+          "",
+          "// Log response details for debugging",
+          "console.log('Response Code:', pm.response.code);",
+          "console.log('Response Time:', pm.response.responseTime + 'ms');",
+          "",
+          "// Store response for analysis",
+          "pm.collectionVariables.set('last_response_code', pm.response.code);",
+          "pm.collectionVariables.set('last_response_time', pm.response.responseTime);"
+        ]
+      }
+    }
+  ]
+}

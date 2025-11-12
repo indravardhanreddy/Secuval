@@ -36,8 +36,8 @@ pub struct UIManager {
 
 impl UIManager {
     /// Create a new UI manager with the given security config
-    pub fn new(config: SecurityConfig) -> Self {
-        let state = Arc::new(UIState::new(config.clone()));
+    pub fn new(config: SecurityConfig, blocked_store: Arc<crate::blocked_requests::BlockedRequestsStore>) -> Self {
+        let state = Arc::new(UIState::new(config.clone(), blocked_store));
         
         Self {
             state: state.clone(),

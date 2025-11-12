@@ -22,6 +22,10 @@ pub struct UIState {
     pub rate_limited: Arc<AtomicU64>,
     pub validation_failures: Arc<AtomicU64>,
     pub auth_failures: Arc<AtomicU64>,
+    pub csrf_failures: Arc<AtomicU64>,
+    
+    /// Blocked requests store
+    pub blocked_store: Arc<crate::blocked_requests::BlockedRequestsStore>,
     
     /// Recent request logs (thread-safe deque)
     pub request_logs: Arc<RwLock<VecDeque<RequestLog>>>,
@@ -44,7 +48,7 @@ pub struct UIState {
 
 impl UIState {
     /// Create a new UI state with default settings
-    pub fn new(config: SecurityConfig) -> Self {
+    pub fn new(config: SecurityConfig, blocked_store: Arc<crate::blocked_requests::BlockedRequestsStore>) -> Self {
         Self {
             config: Arc::new(RwLock::new(config)),
             total_requests: Arc::new(AtomicU64::new(0)),
@@ -52,6 +56,8 @@ impl UIState {
             rate_limited: Arc::new(AtomicU64::new(0)),
             validation_failures: Arc::new(AtomicU64::new(0)),
             auth_failures: Arc::new(AtomicU64::new(0)),
+            csrf_failures: Arc::new(AtomicU64::new(0)),
+            blocked_store,
             request_logs: Arc::new(RwLock::new(VecDeque::with_capacity(1000))),
             security_events: Arc::new(RwLock::new(VecDeque::with_capacity(500))),
             alerts: Arc::new(RwLock::new(Vec::new())),
@@ -69,6 +75,7 @@ impl UIState {
             rate_limited: self.rate_limited.load(Ordering::Relaxed),
             validation_failures: self.validation_failures.load(Ordering::Relaxed),
             auth_failures: self.auth_failures.load(Ordering::Relaxed),
+            csrf_failures: self.csrf_failures.load(Ordering::Relaxed),
             block_rate: if self.total_requests.load(Ordering::Relaxed) == 0 {
                 0.0
             } else {
@@ -188,6 +195,23 @@ impl UIState {
     /// Get current preferences
     pub async fn get_preferences(&self) -> UIPreferences {
         self.preferences.read().await.clone()
+    }
+
+    /// Get blocked requests with optional filtering
+    pub async fn get_blocked_requests(&self, limit: Option<usize>, offset: Option<usize>) -> Vec<crate::blocked_requests::BlockedRequest> {
+        let all_requests = self.blocked_store.get_blocked_requests().await;
+        let offset = offset.unwrap_or(0);
+        let limit = limit.unwrap_or(100).min(1000); // Max 1000 for performance
+        
+        all_requests.into_iter()
+            .skip(offset)
+            .take(limit)
+            .collect()
+    }
+
+    /// Get blocked requests statistics
+    pub async fn get_blocked_stats(&self) -> crate::blocked_requests::BlockedRequestsStats {
+        self.blocked_store.get_stats().await
     }
 }
 
@@ -321,5 +345,6 @@ pub struct MetricsSnapshot {
     pub rate_limited: u64,
     pub validation_failures: u64,
     pub auth_failures: u64,
+    pub csrf_failures: u64,
     pub block_rate: f64,
 }

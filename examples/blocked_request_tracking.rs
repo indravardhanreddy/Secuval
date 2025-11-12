@@ -13,8 +13,14 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .with_input_sanitization(true)
         .strict_mode();
 
+    // Create blocked requests store
+    let blocked_store = Arc::new(crate::blocked_requests::BlockedRequestsStore::new(
+        "blocked_requests.json".to_string(),
+        1000,
+    ));
+
     // Create UI state to track all metrics
-    let ui_state = Arc::new(UIState::new(config.clone()));
+    let ui_state = Arc::new(UIState::new(config.clone(), blocked_store));
     
     // Create security layer with UI state integration
     let security_layer = SecurityLayer::new(config)

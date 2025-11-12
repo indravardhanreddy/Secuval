@@ -84,7 +84,7 @@ impl fmt::Display for SecurityError {
 impl std::error::Error for SecurityError {}
 
 /// Threat severity levels
-#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, serde::Serialize, serde::Deserialize)]
 pub enum ThreatSeverity {
     Low,
     Medium,
@@ -141,7 +141,9 @@ pub struct SecurityLayer {
     rate_limiter: Arc<crate::rate_limit::RateLimiter>,
     validator: Arc<crate::validation::InputValidator>,
     auth_manager: Arc<crate::auth::AuthManager>,
+    csrf_protection: Arc<crate::csrf::CsrfProtection>,
     monitor: Arc<crate::monitoring::Monitor>,
+    blocked_store: Arc<crate::blocked_requests::BlockedRequestsStore>,
     ui_state: Option<Arc<UIState>>,
 }
 
@@ -149,7 +151,7 @@ impl SecurityLayer {
     /// Create a new security layer with the given configuration
     pub fn new(config: SecurityConfig) -> Self {
         let config = Arc::new(config);
-        
+
         Self {
             rate_limiter: Arc::new(crate::rate_limit::RateLimiter::new(
                 config.rate_limit.clone(),
@@ -158,10 +160,42 @@ impl SecurityLayer {
                 config.validation.clone(),
             )),
             auth_manager: Arc::new(crate::auth::AuthManager::new(config.auth.clone())),
+            csrf_protection: Arc::new(crate::csrf::CsrfProtection::new()),
             monitor: Arc::new(crate::monitoring::Monitor::new(config.monitoring.clone())),
+            blocked_store: Arc::new(crate::blocked_requests::BlockedRequestsStore::new(
+                "blocked_requests.json".to_string(),
+                1000, // Keep last 1000 blocked requests
+            )),
             config,
             ui_state: None,
         }
+    }
+
+    /// Replace the internal blocked requests store with an externally provided one.
+    /// This is useful to share the same store between the SecurityLayer and the UI.
+    pub fn with_blocked_store(mut self, blocked_store: Arc<crate::blocked_requests::BlockedRequestsStore>) -> Self {
+        self.blocked_store = blocked_store;
+        self
+    }
+
+    /// Get the UI state
+    pub fn ui_state(&self) -> &Option<Arc<UIState>> {
+        &self.ui_state
+    }
+
+    /// Get the blocked requests store
+    pub fn blocked_store(&self) -> &Arc<crate::blocked_requests::BlockedRequestsStore> {
+        &self.blocked_store
+    }
+
+    /// Get the rate limiter
+    pub fn rate_limiter(&self) -> &Arc<crate::rate_limit::RateLimiter> {
+        &self.rate_limiter
+    }
+
+    /// Get the config
+    pub fn config(&self) -> &SecurityConfig {
+        &self.config
     }
 
     /// Set the UI state for metrics collection
@@ -176,7 +210,7 @@ impl SecurityLayer {
         request: &Request<B>,
     ) -> SecurityResult<SecurityContext>
     where
-        B: AsRef<str>,
+        B: std::fmt::Debug,
     {
         // Extract client IP
         let client_ip = self.extract_client_ip(request);
@@ -189,7 +223,10 @@ impl SecurityLayer {
             .and_then(|h| h.to_str().ok())
             .unwrap_or("unknown")
             .to_string();
-        
+
+        // Extract request payload for logging
+        let payload = self.extract_request_payload(request);
+
         let mut context = SecurityContext::new(request_id.clone(), client_ip.clone());
 
         // Update UI state: increment total requests
@@ -199,8 +236,15 @@ impl SecurityLayer {
 
         // 1. Rate limiting check (fastest check first)
         if self.config.rate_limit.enabled {
-            if let Err(_) = self.rate_limiter.check(&client_ip).await {
-                // Rate limited
+            if let Err(error) = self.rate_limiter.check(&client_ip).await {
+                // Rate limited - store blocked request
+                let _ = self.blocked_store.store_blocked_request(
+                    request,
+                    &context,
+                    &error,
+                    payload.clone(),
+                ).await;
+
                 if let Some(ui_state) = &self.ui_state {
                     ui_state.rate_limited.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
                     ui_state.blocked_requests.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
@@ -221,7 +265,7 @@ impl SecurityLayer {
                     };
                     ui_state.add_request_log(log).await;
                 }
-                return Err(SecurityError::RateLimitExceeded { retry_after: 60 });
+                return Err(error);
             }
         }
 
@@ -230,7 +274,15 @@ impl SecurityLayer {
             if let Some(user_context) = self.auth_manager.authenticate(request).await? {
                 context = context.with_user(user_context.user_id, user_context.roles);
             } else if self.config.auth.require_auth {
-                // Auth failed
+                // Auth failed - store blocked request
+                let error = SecurityError::AuthenticationFailed("Authentication required".to_string());
+                let _ = self.blocked_store.store_blocked_request(
+                    request,
+                    &context,
+                    &error,
+                    payload.clone(),
+                ).await;
+
                 if let Some(ui_state) = &self.ui_state {
                     ui_state.auth_failures.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
                     ui_state.blocked_requests.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
@@ -251,13 +303,46 @@ impl SecurityLayer {
                     };
                     ui_state.add_request_log(log).await;
                 }
-                return Err(SecurityError::AuthenticationFailed(
-                    "Authentication required".to_string(),
-                ));
+                return Err(error);
             }
         }
 
-        // 3. Input validation
+        // 3. CSRF protection
+        if self.config.csrf.enabled && method != "GET" && method != "HEAD" {
+            if let Err(error) = self.csrf_protection.validate_csrf(request, &mut context).await {
+                // CSRF failed - store blocked request
+                let _ = self.blocked_store.store_blocked_request(
+                    request,
+                    &context,
+                    &error,
+                    payload.clone(),
+                ).await;
+
+                if let Some(ui_state) = &self.ui_state {
+                    ui_state.csrf_failures.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+                    ui_state.blocked_requests.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+                    let log = crate::ui::state::RequestLog {
+                        id: request_id.clone(),
+                        timestamp,
+                        method: method.clone(),
+                        path: path.clone(),
+                        client_ip: client_ip.clone(),
+                        user_agent: user_agent.clone(),
+                        user_id: None,
+                        status_code: 403,
+                        response_time_ms: 0.0,
+                        threat_score: 0.0,
+                        blocked: true,
+                        reason: Some("CSRF protection failed".to_string()),
+                        headers: std::collections::HashMap::new(),
+                    };
+                    ui_state.add_request_log(log).await;
+                }
+                return Err(error);
+            }
+        }
+
+        // 4. Input validation
         if self.config.validation.enabled {
             if let Err(e) = self.validator.validate_request(request, &mut context).await {
                 // Validation failed
@@ -344,13 +429,10 @@ impl SecurityLayer {
     }
 
     /// Synchronous version of process_request for FFI bindings
-    pub fn process_request_sync<B>(
+    pub fn process_request_sync<B: std::fmt::Debug>(
         &self,
         request: &Request<B>,
-    ) -> SecurityResult<SecurityContext>
-    where
-        B: AsRef<str>,
-    {
+    ) -> SecurityResult<SecurityContext> {
         // Create a runtime for executing async code synchronously
         let rt = tokio::runtime::Runtime::new().unwrap();
         rt.block_on(self.process_request(request))
@@ -373,14 +455,26 @@ impl SecurityLayer {
             .to_string()
     }
 
+    fn extract_request_payload<B>(&self, request: &Request<B>) -> Option<String>
+    where
+        B: std::fmt::Debug,
+    {
+        // Try to extract payload from request body
+        // Note: This is a simplified version. In a real implementation,
+        // you'd need to handle different body types properly
+        let body_str = format!("{:?}", request.body());
+        if body_str.len() > 2 && body_str != "()" { // Filter out empty bodies
+            Some(body_str)
+        } else {
+            None
+        }
+    }
+
     async fn detect_threats<B>(
         &self,
         request: &Request<B>,
         context: &mut SecurityContext,
-    ) -> SecurityResult<()>
-    where
-        B: AsRef<str>,
-    {
+    ) -> SecurityResult<()> {
         // Smart threat detection based on request patterns
         let uri = request.uri().to_string();
         let uri_lower = uri.to_lowercase();
@@ -496,7 +590,9 @@ impl Clone for SecurityLayer {
             rate_limiter: Arc::clone(&self.rate_limiter),
             validator: Arc::clone(&self.validator),
             auth_manager: Arc::clone(&self.auth_manager),
+            csrf_protection: Arc::clone(&self.csrf_protection),
             monitor: Arc::clone(&self.monitor),
+            blocked_store: Arc::clone(&self.blocked_store),
             ui_state: self.ui_state.clone(),
         }
     }

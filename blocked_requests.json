@@ -1,0 +1,4178 @@
+[
+  {
+    "id": "b17518c2-1541-4e38-9a9d-d9399a5d097d",
+    "timestamp": "2025-11-12T09:20:21.051800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=1952",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e2c99020-26f4-44df-ba3e-4261ba6091e8",
+    "timestamp": "2025-11-12T09:20:21.098816600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=12044",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "dcde04b2-d655-4b8f-b6ed-7fff69a47d33",
+    "timestamp": "2025-11-12T09:20:21.160072400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=31398",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e53a3997-2b00-4de4-9dd4-8924701a06e4",
+    "timestamp": "2025-11-12T09:20:21.444504900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1958",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "fb86c854-a9b7-4577-9c81-623cc62fffb9",
+    "timestamp": "2025-11-12T09:20:21.721383800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=31409",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b278b905-ecdd-4e36-b1f2-503178242508",
+    "timestamp": "2025-11-12T09:20:21.752182400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=91277",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "65f687a7-a2c3-41f9-a539-c600315f4ae8",
+    "timestamp": "2025-11-12T09:20:21.798832600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=91896",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "138a7b26-d17b-4925-9bed-8a6cbe147d98",
+    "timestamp": "2025-11-12T09:20:21.955185100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=51981",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3b2982ae-d398-4aec-9e89-fed8d14428d3",
+    "timestamp": "2025-11-12T09:20:22.003406Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1962",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b504bec8-2ace-4484-9ce8-d5ac3a063ca3",
+    "timestamp": "2025-11-12T09:20:22.003408Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9518",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e5891806-e000-4494-8346-8e3688c454b2",
+    "timestamp": "2025-11-12T09:20:22.268990800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=51272",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "41639ac5-d40f-4202-a40b-5a5afce217cf",
+    "timestamp": "2025-11-12T09:20:22.333325300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=81911",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "acc0e370-2072-497f-9456-a3031547e6d9",
+    "timestamp": "2025-11-12T09:20:22.488831600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=32001",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "03542d53-2264-4868-97b2-05a35333064d",
+    "timestamp": "2025-11-12T09:20:22.829305900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3437",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a9dc4019-6fc8-4416-a5d8-1355afc50985",
+    "timestamp": "2025-11-12T09:20:22.907040200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4510",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2e02873c-b762-4a80-87ee-d0cf06cd55d8",
+    "timestamp": "2025-11-12T09:20:22.969375800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=1462",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3aa92341-6d77-4590-9d29-3e435a4f9a87",
+    "timestamp": "2025-11-12T09:20:23.456121200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=5445",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "1a1a8372-964d-4066-a7e8-966a5dadd679",
+    "timestamp": "2025-11-12T09:20:23.859914300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2459",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "47baf8b8-1fc3-46d0-8937-7068ec9bd4de",
+    "timestamp": "2025-11-12T09:20:24.078959700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=21381",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "27f609c8-4053-456b-852d-66de55e2a030",
+    "timestamp": "2025-11-12T09:20:24.172676300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8432",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3d6eaa91-0520-49da-8d81-4cda3d60be78",
+    "timestamp": "2025-11-12T09:20:24.387965700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=91293",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c4d0f841-4e5f-4d87-bbda-fd6ba36aa6a0",
+    "timestamp": "2025-11-12T09:20:24.719635300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6519",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e248da99-9383-4149-81e8-d0be9b6327be",
+    "timestamp": "2025-11-12T09:20:25.169623600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2508",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d66882a1-b880-4454-95a1-37836eabe293",
+    "timestamp": "2025-11-12T09:20:25.312769700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=21963",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6999b948-882f-4f1b-811e-9e610c4dd413",
+    "timestamp": "2025-11-12T09:20:25.674137600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7453",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "ce31d44b-cceb-46d9-9dd8-f1c06fa30711",
+    "timestamp": "2025-11-12T09:20:25.721231600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6430",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "0c6a824e-9f33-437c-8614-eaac5744c7d1",
+    "timestamp": "2025-11-12T09:20:25.924073900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=21384",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "7678c9fc-5cfb-4123-aa62-4b7af5be5ab0",
+    "timestamp": "2025-11-12T09:20:26.238361800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=41383",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "37bce4f3-f177-4ca2-bf68-d011c1293b19",
+    "timestamp": "2025-11-12T09:20:26.255100700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=91298",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "50d19329-9544-40cd-a57a-9a62a3bab8c9",
+    "timestamp": "2025-11-12T09:20:26.569646200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=71981",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "894f9345-59cb-4a7f-afc9-6f18a054ac91",
+    "timestamp": "2025-11-12T09:20:26.819415Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8508",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "98d9a270-98c2-47cb-9ff9-c8ca72a3789d",
+    "timestamp": "2025-11-12T09:20:28.623845300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=12078",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c31e94bc-cf65-4689-8b89-aa4d872623e7",
+    "timestamp": "2025-11-12T09:20:28.624329800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8509",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "50a3bb04-21f5-422d-990e-89c1ca5059cf",
+    "timestamp": "2025-11-12T09:20:28.685520600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=11426",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "64a8a697-3953-4c24-8756-47bd413ddea2",
+    "timestamp": "2025-11-12T09:20:28.950382100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=71988",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b2bc251c-c27a-4ae0-baaf-bc656841fc64",
+    "timestamp": "2025-11-12T09:20:29.077529400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3455",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "cd9f7552-b9d1-422a-95ab-9fec60186da1",
+    "timestamp": "2025-11-12T09:20:29.106108700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=1476",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3d1f563f-b1dd-40cf-89a1-04f8889e2e80",
+    "timestamp": "2025-11-12T09:20:29.110710200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3585",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6133e393-97cb-4b48-95d8-b5c116fb2867",
+    "timestamp": "2025-11-12T09:20:29.266496200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9452",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b06ad85b-cb70-4750-9372-33adc6829628",
+    "timestamp": "2025-11-12T09:20:29.626084200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8518",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6e6a8b3d-8ffe-4e6e-808b-deda972d4dc7",
+    "timestamp": "2025-11-12T09:20:30.327850400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8445",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "dc592108-b4d2-466c-9152-1613b07168da",
+    "timestamp": "2025-11-12T09:20:30.844381Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=51300",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c02fee57-3738-4217-8e51-77d8b74d1673",
+    "timestamp": "2025-11-12T09:20:31.173004900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9547",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "ea87f89d-8b90-42ab-94b1-cbf838c8f265",
+    "timestamp": "2025-11-12T09:20:31.424788600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=1479",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e24cef37-2177-4260-ab49-8ae041ec3a1a",
+    "timestamp": "2025-11-12T09:20:31.676627Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3461",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c37b744c-32f6-4193-ba74-f9c4a5a8c2e2",
+    "timestamp": "2025-11-12T09:20:31.707977100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=12088",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "cb195c04-1e77-4bf1-a258-12438e869b30",
+    "timestamp": "2025-11-12T09:20:31.756069300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3592",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a353fb02-e6f0-46e7-adcb-8c9f6caf099e",
+    "timestamp": "2025-11-12T09:20:32.758490400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2480",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2fb121b5-34dc-43cc-8261-571dfb8605cf",
+    "timestamp": "2025-11-12T09:20:32.975990500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=52017",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e96a098e-48aa-41a8-b92e-98cc60c8a327",
+    "timestamp": "2025-11-12T09:20:33.085512900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4450",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "9e947915-d013-4777-a1a9-abf341ffbdcb",
+    "timestamp": "2025-11-12T09:20:33.303321900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=51303",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "bdbeb9c6-ef6a-48ce-8964-5fa6a5889723",
+    "timestamp": "2025-11-12T09:20:33.619664900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=61237",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "9f491867-b78d-47d1-8717-68ad6e5449d3",
+    "timestamp": "2025-11-12T09:20:33.620788Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=546",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6d2feab1-f00b-4f17-a9cb-bb5e499cd6eb",
+    "timestamp": "2025-11-12T09:20:33.742562500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=41398",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "41880982-8e4c-46ac-abe6-c69e8274c5f6",
+    "timestamp": "2025-11-12T09:20:33.836469300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=21405",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a7d9bbd1-cc30-4c80-9c40-517f309734d9",
+    "timestamp": "2025-11-12T09:20:35.054051600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2484",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "35394ebe-2b9f-4bd4-8a87-e5c7231d0ac6",
+    "timestamp": "2025-11-12T09:20:35.258543500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=41991",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2ca1ab19-930a-4d4e-82de-5ce5c96cb547",
+    "timestamp": "2025-11-12T09:20:35.370986800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=514",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f87563fa-1a20-4a12-b830-80e234f22353",
+    "timestamp": "2025-11-12T09:20:35.419388Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2487",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "fcd241f3-70ac-4ad9-ab09-d022bd9eaea5",
+    "timestamp": "2025-11-12T09:20:35.621274900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=72008",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a248addd-4bd1-46fc-b208-5d9c26b350fa",
+    "timestamp": "2025-11-12T09:20:36.295335900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6552",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "4604a2ef-16b8-4311-ad91-820c9ef056c6",
+    "timestamp": "2025-11-12T09:20:36.372674800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=71273",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "22b11911-0c11-4069-968a-c410db562362",
+    "timestamp": "2025-11-12T09:20:36.420876200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=32041",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "aa732b82-3407-4adb-aa09-c76909dd5b2f",
+    "timestamp": "2025-11-12T09:20:36.892732900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7479",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c2cf0fcb-4161-479c-a5a9-f2a5d1a2ec28",
+    "timestamp": "2025-11-12T09:20:37.001369400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7548",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "4b39284b-d11b-414c-a93d-6aecca48de9d",
+    "timestamp": "2025-11-12T09:20:37.030041300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=2008",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "cef9351f-3821-43a4-bff0-0568d06e1bbd",
+    "timestamp": "2025-11-12T09:20:37.327266Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3480",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a68b1a85-1d42-49ba-820c-d4931002aaf6",
+    "timestamp": "2025-11-12T09:20:37.547425800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=51320",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6d3b1d5d-5754-4848-aa45-ec799d88033b",
+    "timestamp": "2025-11-12T09:20:38.109368400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=5479",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a8df57d1-1ac4-44ed-b585-b179fa2a4b92",
+    "timestamp": "2025-11-12T09:20:38.294382500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=12105",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "fadfa2db-0e49-4eb3-a9f1-9ea568505734",
+    "timestamp": "2025-11-12T09:20:38.548296200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6555",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "435e6796-1262-4bad-add6-4d06cecaab61",
+    "timestamp": "2025-11-12T09:20:38.548382600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=32044",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "7d61f143-a710-427e-bd3b-46ca019607e8",
+    "timestamp": "2025-11-12T09:20:38.702820600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6556",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "0711d0a9-e5c2-4192-98ed-6acadb02f28b",
+    "timestamp": "2025-11-12T09:20:38.718566500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=91333",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2ae778cd-343f-4d7d-b861-ddd0f8dd51ef",
+    "timestamp": "2025-11-12T09:20:38.750148200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9481",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "18723e8e-40ea-4b79-afad-6d33800f8e2e",
+    "timestamp": "2025-11-12T09:20:39.142365900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=31459",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "0ffb9e8f-1744-4e46-b3a3-d0c80c15dffe",
+    "timestamp": "2025-11-12T09:20:39.327558700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=41409",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d3b4e3c1-33c2-4e28-99af-4f0b6a8f8d23",
+    "timestamp": "2025-11-12T09:20:39.500141100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=531",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b7a1d279-e4d4-4cb3-a10e-7dd5fa61b6f4",
+    "timestamp": "2025-11-12T09:20:39.515934600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=52034",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "bc1b88c2-7ddb-4fc2-8de9-0d53ad117828",
+    "timestamp": "2025-11-12T09:20:40.482665700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=32046",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d13b821b-2d36-4135-97cf-3c7ff84c0be5",
+    "timestamp": "2025-11-12T09:20:40.731484400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=5490",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a5e79330-473e-4964-a7ab-bc83e2f2051e",
+    "timestamp": "2025-11-12T09:20:40.953604800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8547",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "8ddb1d42-2617-4bc6-ab0a-46e940fa9f4b",
+    "timestamp": "2025-11-12T09:20:41.206031800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=32054",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "84b43774-ecb5-412b-a899-218b2aa40b6f",
+    "timestamp": "2025-11-12T09:20:41.346187100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9493",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d5155eb8-b510-4a81-b7c0-51f74be22f2c",
+    "timestamp": "2025-11-12T09:20:41.628207400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7492",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "be63d4cf-28ae-4fed-a58c-2a3409340521",
+    "timestamp": "2025-11-12T09:20:41.660105600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=32059",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e26eefc8-056a-4957-a2ca-b7392aa8ecde",
+    "timestamp": "2025-11-12T09:20:41.753022400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3621",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d92e1565-3336-4f24-8116-e3fb37cacfaf",
+    "timestamp": "2025-11-12T09:20:41.926744100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=31472",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "9a008e9e-d984-4f0b-b6ad-38400d65f7ab",
+    "timestamp": "2025-11-12T09:20:42.052231200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6570",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "233d9838-6eee-411f-83a8-83a9502726f9",
+    "timestamp": "2025-11-12T09:20:42.474770300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=71291",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "521218f0-c7f9-4980-b0a1-6d720fe518f0",
+    "timestamp": "2025-11-12T09:20:42.916994500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=1513",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "ff22a7fe-1693-46e0-915a-fae6479009e1",
+    "timestamp": "2025-11-12T09:20:43.198994400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=81963",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "df9c95ec-3a4e-4336-a026-5049a7d24c68",
+    "timestamp": "2025-11-12T09:20:43.777654500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=2027",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "db6166ab-4937-4e79-9cec-6e9436c75fa2",
+    "timestamp": "2025-11-12T09:20:44.231666800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=11469",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "5823723f-526a-4310-8b88-3170964e15b0",
+    "timestamp": "2025-11-12T09:20:44.371418800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=91962",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "ae4f1b4e-bc69-443b-8d76-1f31b45956f1",
+    "timestamp": "2025-11-12T09:20:44.559916400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4485",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a37a2f11-d9c3-4acc-b068-5d0dd05bd9b5",
+    "timestamp": "2025-11-12T09:20:44.732144600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=1518",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "43560202-ef48-4828-8f1c-2b89c74e8bc5",
+    "timestamp": "2025-11-12T09:20:44.891327200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9591",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "59e040f7-570b-4506-93fe-6c5d49d2b5b7",
+    "timestamp": "2025-11-12T09:20:44.905631700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=61264",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2d931504-05fe-4b91-93c7-ab7d6c0db804",
+    "timestamp": "2025-11-12T09:20:45.076904900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=81968",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "9cce3fcb-4d3c-429c-b7ed-5dd92b26c685",
+    "timestamp": "2025-11-12T09:20:45.125578600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=1521",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "943f424a-fcd1-4e1d-9a28-3d5ec0f34785",
+    "timestamp": "2025-11-12T09:20:45.360206300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=12121",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d703d9ba-13c7-4084-a7bd-5e9c469ac7b2",
+    "timestamp": "2025-11-12T09:20:45.470794800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=32076",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "39c86e7e-26c0-4a4a-ab5c-77ec0ac0e288",
+    "timestamp": "2025-11-12T09:20:45.517305600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=81973",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "63c2c6e2-6f7c-40b2-92f0-9a25de1c9650",
+    "timestamp": "2025-11-12T09:20:45.860832Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8482",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f1069898-3165-430b-9e26-71d5c41765c0",
+    "timestamp": "2025-11-12T09:20:46.015172500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=21444",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f3e901be-33d9-4529-8c93-3983abcc7a36",
+    "timestamp": "2025-11-12T09:20:46.173706800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7507",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "337b27e3-f3d3-458c-9c12-396c1f7290e9",
+    "timestamp": "2025-11-12T09:20:46.315115300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=62045",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "04301163-2cfd-4b86-8f79-672a5678436d",
+    "timestamp": "2025-11-12T09:20:46.518847600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=91353",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "cd45d795-ff42-4c4c-8bd9-2f6a9182a3de",
+    "timestamp": "2025-11-12T09:20:46.613178600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=5570",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "66e646a5-f242-4760-a274-67109954dd26",
+    "timestamp": "2025-11-12T09:20:47.175074300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2527",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "7b8e47c5-a7d5-48ee-99fe-f9d35aa4cfe8",
+    "timestamp": "2025-11-12T09:20:47.830420200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=52057",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b3390529-9906-4ab9-a5bd-8e2929fa4271",
+    "timestamp": "2025-11-12T09:20:48.316737700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7513",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "5e3af023-bb78-4b50-ba4c-dc03388ac592",
+    "timestamp": "2025-11-12T09:20:48.332195500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3511",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "eb8da873-6306-4693-af1b-561739a7f34b",
+    "timestamp": "2025-11-12T09:20:48.351171800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=564",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3213bdbd-3609-4cb9-85d1-608b6448a98f",
+    "timestamp": "2025-11-12T09:20:48.737450400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=91359",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "5b505fc8-16d3-453a-9b3e-9a57817bc318",
+    "timestamp": "2025-11-12T09:20:48.831817500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3642",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "7bc4d76a-4f12-48ee-98aa-0f6467b896bc",
+    "timestamp": "2025-11-12T09:20:49.050513900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2569",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "560f386a-7828-470d-a357-0349fc9faeff",
+    "timestamp": "2025-11-12T09:20:49.451924100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8494",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "1b27b18c-d61d-449f-9f2d-2e4aafeb9091",
+    "timestamp": "2025-11-12T09:20:49.561253500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=71311",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "896fda36-32c3-4e96-bcd4-cbfd848a74c8",
+    "timestamp": "2025-11-12T09:20:50.286831400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=566",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "9f13ec49-dd9d-4115-ad4c-78bb226c2553",
+    "timestamp": "2025-11-12T09:20:50.581345600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=72044",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "359a79ed-b4a8-43e1-a780-72bb82da594b",
+    "timestamp": "2025-11-12T09:20:51.162002500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3647",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "443ce587-b8b8-4822-97cf-0e57e45b850f",
+    "timestamp": "2025-11-12T09:20:51.287918200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1505",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d9a30b66-e2ad-44db-886c-aa8df4178c8e",
+    "timestamp": "2025-11-12T09:20:51.797945800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3651",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "dff5bc0e-d179-4534-83c1-81d631f120e5",
+    "timestamp": "2025-11-12T09:20:51.934109500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=81368",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3280c199-9961-4a6e-aab4-9599b4e6c95e",
+    "timestamp": "2025-11-12T09:20:52.028073800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=42032",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "42a76742-149f-4c1f-bac5-4618cb326099",
+    "timestamp": "2025-11-12T09:20:52.407107900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7589",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "eb4897c0-503d-4b17-973b-586f105f37c5",
+    "timestamp": "2025-11-12T09:20:53.733978200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=579",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "187d2ba8-2e05-48c2-b15d-bbceaf019c87",
+    "timestamp": "2025-11-12T09:20:54.503412300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=61289",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e03d1524-76e3-445c-8bfc-4e01d4eeef9b",
+    "timestamp": "2025-11-12T09:20:54.722482400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=32097",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "8db56ff9-5109-43a1-a413-67fe41f16eaf",
+    "timestamp": "2025-11-12T09:20:55.453946300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6509",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "de67680a-aa86-4b62-8c00-982a57b0ab4c",
+    "timestamp": "2025-11-12T09:20:55.973818900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7599",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "dd67059c-1584-4161-bb3a-1b1bc48a3641",
+    "timestamp": "2025-11-12T09:20:56.335898Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=582",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a1b811f6-a59a-4682-b4dc-23fa88b26f34",
+    "timestamp": "2025-11-12T09:20:56.623026Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4610",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e22163ec-ad7a-41b5-9b0a-9ff5b7f078ed",
+    "timestamp": "2025-11-12T09:20:56.919792900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=81383",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2ec6badb-4baf-4990-abce-6bbabea442eb",
+    "timestamp": "2025-11-12T09:20:57.203244600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=5535",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a9085a33-6ae5-4c33-9cdf-d80ac85b0e7f",
+    "timestamp": "2025-11-12T09:20:57.591959Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=607",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d66abf4c-b909-4a12-aaeb-02c187299618",
+    "timestamp": "2025-11-12T09:20:58.287867400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=52083",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b5dc129b-c7f7-48ce-a306-dac245b62bbb",
+    "timestamp": "2025-11-12T09:20:58.350681500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=62075",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "ef50bd92-0b14-46ff-bb97-aa095e588673",
+    "timestamp": "2025-11-12T09:20:58.510792800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8522",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "17f563b3-d2a6-48b7-b740-738a6a683960",
+    "timestamp": "2025-11-12T09:20:58.556232300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8591",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b92dbcfc-cae5-4f02-bb13-b2016e16e4ba",
+    "timestamp": "2025-11-12T09:20:58.588253500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=11508",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "acf17520-ab9c-4107-aa93-6e3a9190afbe",
+    "timestamp": "2025-11-12T09:20:58.962203900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=593",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "66f0f385-207a-43c9-8020-1c61d648651e",
+    "timestamp": "2025-11-12T09:20:59.261739500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=32113",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "fec34e54-3dd8-4b76-a8eb-f3f18513273f",
+    "timestamp": "2025-11-12T09:20:59.515508100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=81387",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e4dbb4cc-339d-4421-928a-bfcbab81c26b",
+    "timestamp": "2025-11-12T09:20:59.645694Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9543",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "4984ed2c-2b50-42e5-946c-d2286c500cc1",
+    "timestamp": "2025-11-12T09:20:59.662608400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=41459",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "dca8b8ef-e9f6-4d7f-9c54-8e13d67d4673",
+    "timestamp": "2025-11-12T09:20:59.748537400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6525",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "8fd4ac41-8c01-415a-9747-a581337af3cf",
+    "timestamp": "2025-11-12T09:20:59.795942700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=12160",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d5a08222-9fd3-49cf-8156-2d1fa6d7bc36",
+    "timestamp": "2025-11-12T09:20:59.843951600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=22045",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "fa8f1e00-5758-4778-813b-6c8b9cd41eb5",
+    "timestamp": "2025-11-12T09:20:59.873285100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=61305",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "613e977f-aab2-48b8-8719-d935d1d03cb6",
+    "timestamp": "2025-11-12T09:21:00.422491Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=52084",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "5287e222-58c8-4546-a79c-a2bf50dde829",
+    "timestamp": "2025-11-12T09:21:00.643680800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=52085",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "746357da-e27f-40d9-a009-365a0e9d6991",
+    "timestamp": "2025-11-12T09:21:01.004733400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=52087",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "1aee10bf-cd55-4bfa-8e96-55734582f69f",
+    "timestamp": "2025-11-12T09:21:01.716992300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=52090",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "0bcb449f-0548-4556-bac0-447cc089d15c",
+    "timestamp": "2025-11-12T09:21:02.538225500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4619",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "8074f31a-279a-4825-971d-7a1d7e417077",
+    "timestamp": "2025-11-12T09:21:02.963811200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=51381",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c3985b7f-4ed4-41d5-beeb-2ed071c70659",
+    "timestamp": "2025-11-12T09:21:03.034208600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=42053",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c829e6cd-3751-44b6-bc03-daf2e24ef3f1",
+    "timestamp": "2025-11-12T09:21:03.109826200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=32118",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d3540b4b-8a06-4bbf-b47f-d77ab290ba49",
+    "timestamp": "2025-11-12T09:21:03.631367Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2564",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "94b0542b-87d1-41f5-9b92-ab17fe827792",
+    "timestamp": "2025-11-12T09:21:03.705509600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=12163",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e8f94a96-3c14-4be1-a16e-900094c3cfb8",
+    "timestamp": "2025-11-12T09:21:05.027825700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6536",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "df808724-f2ca-41d0-a065-5ede01c579bd",
+    "timestamp": "2025-11-12T09:21:05.849720200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=41472",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "081fabc8-8b60-4fcd-9c59-2ccade3d9159",
+    "timestamp": "2025-11-12T09:21:05.941284200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=61316",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a8777fed-a6b4-4a4b-ab3e-163260e90f78",
+    "timestamp": "2025-11-12T09:21:06.327200100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4527",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "7eb4aae4-dc22-4912-8028-2d7e5c74bc2b",
+    "timestamp": "2025-11-12T09:21:07.487626500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=5554",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "31256c13-4b69-4618-9ae0-88abe80fd800",
+    "timestamp": "2025-11-12T09:21:08.509437Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3542",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "8c47b3fc-44ee-4c7b-ae66-c539153cc68a",
+    "timestamp": "2025-11-12T09:21:09.124217Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1533",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "50990497-dfb2-4202-bd2d-89f0754942f5",
+    "timestamp": "2025-11-12T09:21:12.873004500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=2076",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "170ca1d7-071a-42df-b4b6-7315e33acd04",
+    "timestamp": "2025-11-12T09:21:15.040201300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=42061",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "1e994193-f0c2-4d6d-8181-fd7da425490d",
+    "timestamp": "2025-11-12T09:21:15.041124100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1535",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "5d545bed-825d-4d81-89dc-e90e93c050df",
+    "timestamp": "2025-11-12T09:21:15.906526900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3551",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "31067cc6-a48e-49d1-93ae-352a6a3db72d",
+    "timestamp": "2025-11-12T09:21:16.327646800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3553",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a0a71850-8504-425e-a5dc-93e46376d111",
+    "timestamp": "2025-11-12T09:21:16.874856Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=12178",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b17f44d2-0748-4105-aab5-506fd4ea5870",
+    "timestamp": "2025-11-12T09:21:17.000433500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=82024",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6adadb84-6839-43f7-9146-ba1afb4599a5",
+    "timestamp": "2025-11-12T09:21:17.048616Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=51396",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "bb224ccf-df21-42ea-9b5b-ae07b2ce63dc",
+    "timestamp": "2025-11-12T09:21:17.067054200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=72082",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b8053e7c-c118-42d2-99f4-bd1f469a6c07",
+    "timestamp": "2025-11-12T09:21:17.190155500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2574",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a834ff00-784b-42e1-926a-1e671d2c9222",
+    "timestamp": "2025-11-12T09:21:18.049657400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4638",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3d576e40-ae49-4ae6-b5ac-2f28b527081d",
+    "timestamp": "2025-11-12T09:21:18.614363400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2082",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "928d18ac-459c-46b7-a650-a1d8d5b1c8b7",
+    "timestamp": "2025-11-12T09:21:18.733260900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=11528",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "86ce2726-ca43-4a1d-93e5-e91a602dd03a",
+    "timestamp": "2025-11-12T09:21:18.851783500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=638",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "8b5abb9e-2f5d-4088-a1e3-67f0a3529ad6",
+    "timestamp": "2025-11-12T09:21:20.449552300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6555",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "3d014385-77f8-4eba-a63e-aff7037b5809",
+    "timestamp": "2025-11-12T09:21:22.228251200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8545",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a3d72322-e1fe-49ad-b31e-9a21b8c50f66",
+    "timestamp": "2025-11-12T09:21:22.254900400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=1581",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "dfce767a-fd8b-46ec-841b-e66cf0184561",
+    "timestamp": "2025-11-12T09:21:23.241182800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9572",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "db657dac-ebda-44a7-ad9b-512051719442",
+    "timestamp": "2025-11-12T09:21:23.459256600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3701",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "eee522f5-ca3c-4c0c-bafd-570c8a25beda",
+    "timestamp": "2025-11-12T09:21:24.912337600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=22075",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "5ef9ba5d-8203-4f9f-af24-7b566e595c50",
+    "timestamp": "2025-11-12T09:21:26.474805Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=82040",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f3869aa2-e3d4-4879-a3f8-aa8132c1c531",
+    "timestamp": "2025-11-12T09:21:26.946275500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1551",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c0825657-49d0-45ea-a07b-514e514b5569",
+    "timestamp": "2025-11-12T09:21:28.808813100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=42077",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "816abe71-5694-4e46-b574-da5b7a547be3",
+    "timestamp": "2025-11-12T09:21:29.580047100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7649",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f7b694f2-c6e7-4739-8707-82d87a82e5bd",
+    "timestamp": "2025-11-12T09:21:29.801303100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=62110",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "84b29f2e-d5d8-4e41-a5ff-233b0664996f",
+    "timestamp": "2025-11-12T09:21:29.841828700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3706",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "d2cb5440-30ea-4a48-841d-4c8114f5eb52",
+    "timestamp": "2025-11-12T09:21:29.925470700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=21502",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c84a62be-8467-4d33-8f65-5c070e2a6b5d",
+    "timestamp": "2025-11-12T09:21:30.037792200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=92026",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "5494b173-65b9-4a41-b772-af1d1b09531c",
+    "timestamp": "2025-11-12T09:21:30.291376600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7572",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b0da6a8c-cb0f-4158-b68b-96c2729b36c2",
+    "timestamp": "2025-11-12T09:21:30.356229600Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2629",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "9e99baa1-bfd0-488a-bc0c-128184ab0a6e",
+    "timestamp": "2025-11-12T09:21:32.106091800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1552",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "8f3d725f-055b-4752-a24d-ec17b7ae37a7",
+    "timestamp": "2025-11-12T09:21:32.186447700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4552",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e23a2590-eaff-4776-adf6-1e65f5596162",
+    "timestamp": "2025-11-12T09:21:32.214919300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=82043",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "a28e96d4-030a-4371-861d-070f512479ef",
+    "timestamp": "2025-11-12T09:21:33.000597400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=81428",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "52f82f9a-274e-42bb-9b80-fdb741e7486a",
+    "timestamp": "2025-11-12T09:21:33.569146300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=9676",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "ed0d2fa9-2e92-4e04-a318-2f1612ef540b",
+    "timestamp": "2025-11-12T09:21:35.692211300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=62114",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "1cdc58ea-6f81-4e61-b7dc-038d2c7463ef",
+    "timestamp": "2025-11-12T09:21:36.671196100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=71364",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "1ac29339-54d4-4660-b84b-22650b20f685",
+    "timestamp": "2025-11-12T09:21:37.764976700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7581",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "b7aaff07-803f-4763-9c46-5da88b26cc78",
+    "timestamp": "2025-11-12T09:21:38.967013500Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=92042",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e77a15f6-58a5-4b1e-8851-c703f16f0601",
+    "timestamp": "2025-11-12T09:21:39.050056900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3577",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "187bb663-29a0-403b-933e-cc271f358656",
+    "timestamp": "2025-11-12T09:21:39.174806400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4559",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e592e197-95f9-4b6a-bb87-be802d8e8808",
+    "timestamp": "2025-11-12T09:21:39.441955300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1658",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2408ced6-e6d7-48c8-a91e-b627d2238076",
+    "timestamp": "2025-11-12T09:21:39.893552Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=7588",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "09ca3b0c-807b-49ff-9921-975a85ccb79a",
+    "timestamp": "2025-11-12T09:21:40.303536900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=42089",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "e7707634-24c2-48f4-8bd9-2c4a51323b79",
+    "timestamp": "2025-11-12T09:21:40.666141800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=52135",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "94600f43-a43d-420f-98f6-80a5abaeaacf",
+    "timestamp": "2025-11-12T09:21:41.753275200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=3724",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6b11aefd-7774-463e-a374-6ae11915dd4f",
+    "timestamp": "2025-11-12T09:21:42.267583200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=5634",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "30489349-10fa-4f8c-ab4a-87d2e174ff6f",
+    "timestamp": "2025-11-12T09:21:43.273029900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6584",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "26305625-17c0-4756-8333-4a1decd22230",
+    "timestamp": "2025-11-12T09:21:44.971849700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4663",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2eff03b6-967e-43f3-a57b-ee5e132c7173",
+    "timestamp": "2025-11-12T09:21:45.554701400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=61355",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f816c4a9-d879-49b2-9ed9-5b0c567adb0b",
+    "timestamp": "2025-11-12T09:21:45.806238900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1571",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "dbb1e821-b3a0-4bc8-89c4-663b6e8a8113",
+    "timestamp": "2025-11-12T09:21:47.282059100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=91434",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "c5481164-8432-4d25-a799-f3888d5febbd",
+    "timestamp": "2025-11-12T09:21:47.517620200Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=8574",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "9c35d369-da83-4632-91ff-6812b87d2b88",
+    "timestamp": "2025-11-12T09:21:47.549590400Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=12207",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f33a133a-5669-48d8-8802-a5fd9f270997",
+    "timestamp": "2025-11-12T09:21:47.991126800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=72110",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "f0c4c4c0-a853-4aa5-adfb-3cbf717c85c9",
+    "timestamp": "2025-11-12T09:21:48.807598900Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=62132",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "95b732ed-91fe-48cf-89fd-79794e49e295",
+    "timestamp": "2025-11-12T09:21:49.045628100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=1574",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "72e3ef32-3528-4bba-8fc6-2a8e4638c6c1",
+    "timestamp": "2025-11-12T09:21:49.262838700Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=6591",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "6f0a8ea8-d6cd-4efe-aef5-17ea3f55ab30",
+    "timestamp": "2025-11-12T09:21:49.436994100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=4576",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "0a60afc5-3feb-469c-8ddf-a8ac18fdd107",
+    "timestamp": "2025-11-12T09:21:49.624783800Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20SELECT%20NULL%2C%20NULL%2C%20NULL--&type=SQLi&id=82075",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "2874ed54-463f-493c-8bfa-562257f9dfc3",
+    "timestamp": "2025-11-12T09:21:49.720350100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=91438",
+    "headers": {
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+      "host": "localhost:3000"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "7c88dcc3-eee5-4cdd-937d-00fab3d71695",
+    "timestamp": "2025-11-12T09:21:49.781005300Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input=1'%20UNION%20SELECT%20NULL%2C%20username%2C%20password%20FROM%20users--&type=SQLi&id=2653",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  },
+  {
+    "id": "34b89914-6d40-4958-a58f-a0474122697c",
+    "timestamp": "2025-11-12T09:21:50.142533100Z",
+    "client_ip": "unknown",
+    "user_agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051",
+    "method": "GET",
+    "url": "/api/test/secure?input='%20UNION%20ALL%20SELECT%20NULL%2C%20table_name%20FROM%20information_schema.tables--&type=SQLi&id=31568",
+    "headers": {
+      "host": "localhost:3000",
+      "user-agent": "Mozilla/5.0 (Windows NT; Windows NT 10.0; en-IN) WindowsPowerShell/5.1.26100.7051"
+    },
+    "payload": "Body(UnsyncBoxBody)",
+    "threat_score": 60,
+    "block_reason": "Threat detected",
+    "severity": "High",
+    "user_id": null,
+    "request_size": 128
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "scan": {
+    "id": "2e8f8b38-685e-4ee6-853a-dc316d811287",
+    "repoId": "",
+    "version": "4.8.0",
+    "applicationId": "00f32533-9970-44a0-a56d-7e14b44f959f",
+    "externalUserId": "",
+    "env": "Development",
+    "status": "COMPLETED",
+    "applicationName": "ssms",
+    "timestamp": "1762933485518",
+    "envId": "18c74d58-fded-478c-b268-f034af11332e",
+    "parentScanId": ""
+  },
+  "scanDuration": 59,
+  "urlCount": 8,
+  "alertStats": {
+    "totalAlerts": 1,
+    "uniqueAlerts": 0,
+    "alertStatusStats": [
+      {
+        "alertStatus": "UNKNOWN",
+        "totalCount": 6,
+        "severityStats": {
+          "Low": 6
+        }
+      }
+    ]
+  },
+  "severityStats": {
+    "Low": 1
+  },
+  "configHash": "-1214116379",
+  "timestamp": 1762933533348,
+  "appHost": "http://localhost:3000",
+  "scanErrors": [],
+  "applicationAlerts": [
+    {
+      "pluginId": "10021",
+      "name": "X-Content-Type-Options Header Missing",
+      "description": "### Remediation\n\nTo fix this vulnerability, the X-Content-Type-Options header should be set to 'nosniff'. This will prevent older versions of Internet Explorer and Chrome from performing MIME-sniffing on the response body. \n\nTo set the X-Content-Type-Options header to 'nosniff', you can add the following configuration to your web server:\n\n```apache\n<IfModule mod_headers.c>\n    Header set X-Content-Type-Options \"nosniff\"\n</IfModule>\n```\n\nIf you are using a different web server, refer to its documentation for the specific configuration syntax.\n\n### About\n\nThe X-Content-Type-Options header is a security feature that helps prevent MIME-sniffing attacks. When this header is set to 'nosniff', it instructs the browser to strictly interpret the content type specified in the response headers and not perform any MIME-sniffing. This ensures that the response body is displayed as the intended content type and not interpreted as something else.\n\nWithout the X-Content-Type-Options header set to 'nosniff', older versions of Internet Explorer and Chrome may perform MIME-sniffing on the response body. This means that they may ignore the declared content type and try to guess the content type based on the actual content. This can lead to security vulnerabilities, as the browser may interpret and display the response body as a different content type, potentially exposing sensitive information or executing malicious code.\n\n### Risks\n\nIf the X-Content-Type-Options header is missing or not set to 'nosniff', there are several risks:\n\n1. **MIME-sniffing attacks:** Older versions of Internet Explorer and Chrome may perform MIME-sniffing on the response body, potentially causing it to be interpreted and displayed as a content type other than the declared content type. This can lead to security vulnerabilities and expose sensitive information.\n\n2. **Content type misinterpretation:** Without the X-Content-Type-Options header set to 'nosniff', the browser may interpret the response body as a different content type than intended. This can result in the incorrect rendering of the content or the execution of malicious code.\n\n3. **Compatibility issues:** Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing. However, if the declared content type is incorrect or missing, it may still lead to compatibility issues with Firefox and other browsers that follow the same behavior.",
+      "severity": "Low",
+      "references": [
+        "http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx",
+        "https://www.owasp.org/index.php/List_of_useful_HTTP_headers"
+      ],
+      "uriCount": 6,
+      "requestMethod": "",
+      "alertStatusStats": [
+        {
+          "alertStatus": "UNKNOWN",
+          "totalCount": 6,
+          "severityStats": {
+            "Low": 6
+          }
+        }
+      ],
+      "cweId": "693"
+    }
+  ],
+  "policyName": "",
+  "metadata": {
+    "tags": {
+      "userId": "62090649-322f-4991-9827-d4f6b1f52bbc",
+      "hostedOas": "",
+      "policyName": "DEFAULT_API",
+      "isCustomPolicy": "false",
+      "policyDisplayName": "OpenAPI/REST API"
+    }
+  }
+}
