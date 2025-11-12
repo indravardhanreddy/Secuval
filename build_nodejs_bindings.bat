@@ -7,7 +7,6 @@ echo =======================================
 REM Build the Rust library first
 echo.
 echo Building Rust library...
-cd ..\..
 cargo build --release
 if %errorlevel% neq 0 (
     echo ERROR: Failed to build Rust library
@@ -29,6 +28,7 @@ REM Build the Node.js bindings
 echo.
 echo Building Node.js bindings...
 cd bindings\nodejs
+if not exist "build\Release" mkdir "build\Release"
 npm run build
 if %errorlevel% neq 0 (
     echo ERROR: Failed to build Node.js bindings
