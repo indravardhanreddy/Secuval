@@ -2,7 +2,7 @@
 
 ## What Is SecureAPIs?
 
-A **production-ready API security middleware** written in Rust that acts as your first line of defense against attacks. Deploy it as a reverse proxy in front of any API to automatically protect all requests.
+A **production-ready API security middleware** written in Rust that acts as your first line of defense against attacks. Integrate it directly into your API applications using language bindings for seamless protection.
 
 ## Project Status: ✅ OPEN SOURCE READY
 
@@ -87,33 +87,34 @@ secureapis/
 ```
 Internet Request
        ↓
-SecureAPIs (Port 3000)
+Your API Application (ANY Language)
+  ├─ SecureAPIs Middleware (Rust)
   ├─ Check rate limits
   ├─ Validate input
   ├─ Verify JWT token
   ├─ Check threat patterns
   └─ Add security headers
        ↓
-Your Backend API (Port 5000) - ANY LANGUAGE
+Your Business Logic
   └─ Process safe request
 ```
 
 ### Works with ANY Language!
 
-SecureAPIs is **language-agnostic**. Deploy it as a standalone reverse proxy in front of your backend, regardless of what language your API is written in:
+SecureAPIs is **language-agnostic**. Integrate it directly into your applications using native language bindings:
 
-| Language | Example Backend | How it Works |
-|----------|-----------------|-------------|
-| **.NET / C#** | ASP.NET Core | Standalone reverse proxy |
-| **Java** | Spring Boot | Standalone reverse proxy |
-| **Node.js** | Express/Fastify | Standalone reverse proxy |
-| **Python** | FastAPI/Django | Standalone reverse proxy |
-| **Go** | Gin/Echo | Standalone reverse proxy |
-| **Ruby** | Rails | Standalone reverse proxy |
-| **PHP** | Laravel | Standalone reverse proxy |
-| **Rust** | Axum/Actix | Standalone reverse proxy |
+| Language | Example Framework | Integration Method |
+|----------|-------------------|-------------------|
+| **.NET / C#** | ASP.NET Core | Native middleware |
+| **Java** | Spring Boot | Servlet filter |
+| **Node.js** | Express/Fastify | Express middleware |
+| **Python** | FastAPI/Django | Framework middleware |
+| **Go** | Gin/Echo | HTTP middleware |
+| **Ruby** | Rails | Rack middleware |
+| **PHP** | Laravel | HTTP middleware |
+| **Rust** | Axum/Actix | Native integration |
 
-**Zero code changes needed!** Read: [Multi-Language Integration Guide](docs/MULTILANGUAGE_INTEGRATION.md)
+**Native performance with minimal integration!** Read: [Multi-Language Integration Guide](docs/MULTILANGUAGE_INTEGRATION.md)
 
 ### What It Protects Against
 
@@ -252,29 +253,27 @@ cargo bench
 
 ## Deployment Options
 
-### 1. Single Server
+### 1. Direct Integration
 ```
-Reverse Proxy (Nginx)
+Your API Application
     ↓
-SecureAPIs (Port 3000)
+SecureAPIs Middleware (Integrated)
     ↓
-Your Backend (Port 5000)
-```
-
-### 2. Load Balanced
-```
-Load Balancer (HAProxy/ALB)
-    ↓
-SecureAPIs Cluster (3+ instances)
-    ↓
-Backend Cluster (3+ instances)
+Your Business Logic
 ```
 
-### 3. Kubernetes
-```yaml
-Deployment: secureapis-gateway
-Replicas: 3
-Service: LoadBalancer
+### 2. Sidecar Pattern
+```
+API Container + SecureAPIs Sidecar
+    ↓
+Service Mesh
+```
+
+### 3. Gateway Pattern
+```
+API Gateway with SecureAPIs
+    ↓
+Microservices Cluster
 ```
 
 See **DEPLOYMENT_GUIDE.md** for details.
@@ -302,18 +301,18 @@ SecurityConfig::new()
 ## Common Use Cases
 
 ### 1. Protecting an Express API
-- Deploy SecureAPIs on port 3000
-- Keep Express on port 5000 (localhost-only)
-- All requests go through SecureAPIs first
+- Add SecureAPIs middleware to Express app
+- Configure security settings
+- All requests automatically protected
 
 ### 2. Multi-API Gateway
-- Deploy on port 3000
-- Route different paths to different backends
+- Deploy SecureAPIs in API gateway
+- Route different paths through security checks
 - Single security layer for all APIs
 
 ### 3. Microservices Protection
-- Deploy SecureAPIs in Kubernetes
-- Use as sidecar or ingress controller
+- Integrate SecureAPIs into each service
+- Use as sidecar containers
 - Protect all service-to-service communication
 
 ### 4. Mobile App Backend

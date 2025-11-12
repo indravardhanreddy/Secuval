@@ -1,152 +1,95 @@
-# Production Deployment Guide: Using SecureAPIs as Your First Security Layer
+# Production Deployment Guide: Integrating SecureAPIs Middleware
 
 ## Overview
 
-SecureAPIs is designed to be deployed as a **reverse proxy security layer** that sits in front of your API application. All requests pass through it first, where they're validated, rate-limited, and protected before reaching your actual API.
+SecureAPIs is designed to be integrated directly into your API applications as middleware. It provides comprehensive security checks at the application layer, protecting against threats before they reach your business logic.
 
 ```
 Internet Request
        ↓
 ┌──────────────────────────┐
-│   SecureAPIs Layer       │  ← First Security Gate
-│  - Rate Limiting         │
-│  - Input Validation      │
-│  - Threat Detection      │
-│  - Authentication        │
-└──────────────────────────┘
-       ↓ (Safe Requests)
-┌──────────────────────────┐
-│   Your API               │  ← Trusted Inner Layer
-│  (Express, Axum, etc)    │
+│   Your API Application   │
+│  ├─ SecureAPIs Middleware│  ← Integrated Security
+│  │  - Rate Limiting      │
+│  │  - Input Validation   │
+│  │  - Threat Detection   │
+│  │  - Authentication     │
+│  └─ Your Business Logic  │
 └──────────────────────────┘
        ↓
    Database
 ```
 
-## Quick Start: Deploy as First Layer
+## Quick Start: Integrate as Middleware
 
-### Step 1: Set Up SecureAPIs as a Wrapper
+### Step 1: Choose Your Language Integration
 
-Create a new Rust project or use the `production_setup.rs` example as your security layer.
+SecureAPIs provides native bindings for multiple languages. Choose the one that matches your stack:
 
-**Option A: Using the Example (Recommended for Getting Started)**
-```bash
-cargo run --example production_setup
-```
-
-**Option B: Create Your Own Binary**
-```bash
-cargo new secure_api_gateway
-cd secure_api_gateway
-```
-
-Then add to `Cargo.toml`:
-```toml
-[dependencies]
-secureapis = "0.1.0"
-axum = "0.7"
-tokio = { version = "1.35", features = ["full"] }
-serde_json = "1.0"
-```
-
-### Step 2: Configure Your Security Layer
-
-Create `src/main.rs` with production settings:
-
+**For Rust/Axum (Native):**
 ```rust
 use secureapis::{SecurityLayer, SecurityConfig};
-use axum::{
-    routing::all,
-    http::Request,
-    Router,
+use axum::{Router, routing::get};
+
+let security_config = SecurityConfig::new()
+    .with_rate_limit(1000, 60)
+    .with_jwt_validation("your-secret")
+    .with_input_sanitization(true);
+
+let app = Router::new()
+    .route("/api/data", get(handler))
+    .layer(SecurityLayer::new(security_config)); // ← Security middleware
+```
+
+**For Node.js/Express:**
+```javascript
+const express = require('express');
+const { SecureAPIsMiddleware } = require('secureapis');
+
+const app = express();
+const secureAPIs = new SecureAPIsMiddleware({
+    rateLimitRequestsPerMinute: 1000,
+    enableJwtValidation: true,
+    jwtSecret: 'your-secret'
+});
+
+app.use(secureAPIs.middleware()); // ← Security middleware
+```
+
+**For Python/FastAPI:**
+```python
+from fastapi import FastAPI
+from secureapis import SecureAPIsMiddleware
+
+app = FastAPI()
+app.add_middleware(SecureAPIsMiddleware,
+    rate_limit_requests_per_minute=1000,
+    enable_jwt_validation=True,
+    jwt_secret='your-secret'
+)  # ← Security middleware
+```
+
+### Step 2: Configure Security Settings
+
+Choose appropriate security levels for your application:
+
+```javascript
+// Development (lenient)
+const config = {
+    rateLimitRequestsPerMinute: 10000,
+    enableInputSanitization: true,
+    enableJwtValidation: false
 };
-use std::net::SocketAddr;
 
-#[tokio::main]
-async fn main() {
-    // =====================================
-    // CONFIGURE SECURITY LAYER
-    // =====================================
-    let security_config = SecurityConfig::new()
-        // Rate limiting: Adjust these numbers based on your needs
-        .with_rate_limit(1000, 60)      // 1000 requests per minute per IP
-        
-        // Authentication
-        .with_jwt_validation("your-secret-key-from-vault")
-        
-        // Input protection
-        .with_input_sanitization(true)  // Protects against XSS, SQL injection, etc.
-        
-        // Enable strict mode for production
-        .strict_mode();
-    
-    let security_layer = SecurityLayer::new(security_config);
-    
-    // =====================================
-    // SETUP ROUTES TO FORWARD TO YOUR API
-    // =====================================
-    let app = Router::new()
-        // Wildcard route to proxy all requests to your backend API
-        .route("/*path", all(proxy_to_backend))
-        // Apply security layer to ALL routes
-        .layer(security_layer);
-    
-    // =====================================
-    // START SECURITY GATEWAY
-    // =====================================
-    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
-    println!("🛡️  SecureAPIs Gateway listening on {}", addr);
-    println!("   Forwarding to backend: http://localhost:5000");
-    
-    let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
-}
-
-// Forward requests to your actual backend API
-async fn proxy_to_backend(
-    axum::extract::Request { body, .. }: axum::extract::Request,
-) -> String {
-    // This is simplified - in production you'd use a proper HTTP client
-    format!("Request forwarded to backend API")
-}
-```
-
-### Step 3: Port Configuration
-
-```
-┌─ Port 3000 (SecureAPIs - PUBLIC FACING)
-│  └─ All requests go here first
-│     ↓
-│  Port 5000 (Your Backend API - INTERNAL ONLY)
-│
-```
-
-**Start your services in this order:**
-
-```bash
-# Terminal 1: Start your actual backend API on port 5000
-# (Express, FastAPI, Node.js, Python, etc.)
-PORT=5000 npm start
-# or
-uvicorn app:app --port 5000
-# or whatever your backend uses
-
-# Terminal 2: Start SecureAPIs Gateway on port 3000
-cargo run --release
-```
-
-**Firewall Configuration:**
-```bash
-# Only expose port 3000 to the internet
-# Keep port 5000 localhost-only
-
-# UFW (Linux)
-ufw allow 3000
-ufw allow 5000/tcp from 127.0.0.1
-
-# Windows Firewall (PowerShell as Admin)
-New-NetFirewallRule -DisplayName "Allow SecureAPIs" -Direction Inbound -LocalPort 3000 -Protocol TCP -Action Allow
-New-NetFirewallRule -DisplayName "Block Backend Direct" -Direction Inbound -LocalPort 5000 -Protocol TCP -Action Block
+// Production (strict)
+const config = {
+    rateLimitRequestsPerMinute: 100,
+    enableInputSanitization: true,
+    enableJwtValidation: true,
+    jwtSecret: process.env.JWT_SECRET,
+    enableCsrfProtection: true,
+    strictMode: true
+};
 ```
 
 ## Configuration Reference
@@ -207,67 +150,58 @@ SecurityConfig::new()
 
 ### Scenario: Securing a Node.js Express API
 
-**Step 1: Keep your Express API unchanged**
-```javascript
-// backend/app.js - runs on localhost:5000
-const express = require('express');
-const app = express();
+**Step 1: Install SecureAPIs**
+```bash
+npm install secureapis
+```
 
+**Step 2: Integrate middleware into your Express app**
+```javascript
+// app.js - your main Express application
+const express = require('express');
+const { SecureAPIsMiddleware } = require('secureapis');
+
+const app = express();
+app.use(express.json());
+
+// Configure SecureAPIs middleware
+const secureAPIs = new SecureAPIsMiddleware({
+    rateLimitRequestsPerMinute: 1000,
+    enableJwtValidation: true,
+    jwtSecret: process.env.JWT_SECRET,
+    enableInputSanitization: true,
+    enableCsrfProtection: true,
+    strictMode: true
+});
+
+// Apply security middleware to ALL routes
+app.use(secureAPIs.middleware());
+
+// Your API routes (now protected)
 app.get('/api/users', (req, res) => {
     res.json({ users: [] });
 });
 
 app.post('/api/users', (req, res) => {
+    // Input is automatically validated by middleware
+    const userData = req.body;
     // Process user creation
-    res.json({ created: true });
+    res.json({ created: true, user: userData });
 });
 
-app.listen(5000, 'localhost', () => {
-    console.log('Backend API on localhost:5000');
+app.listen(3000, () => {
+    console.log('🛡️ Secure API running on port 3000');
 });
 ```
 
-**Step 2: Deploy SecureAPIs in front**
-```rust
-// gateway/src/main.rs - runs on 0.0.0.0:3000
-use secureapis::{SecurityLayer, SecurityConfig};
-use axum::{routing::all, Router};
-use std::net::SocketAddr;
-
-#[tokio::main]
-async fn main() {
-    let security_config = SecurityConfig::new()
-        .with_rate_limit(1000, 60)
-        .with_jwt_validation("prod-secret-key")
-        .with_input_sanitization(true)
-        .strict_mode();
-    
-    let app = Router::new()
-        .route("/*path", all(forward_request))
-        .layer(SecurityLayer::new(security_config));
-    
-    let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
-    let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
-    axum::serve(listener, app).await.unwrap();
-}
-
-async fn forward_request(req: axum::extract::Request) -> axum::response::IntoResponse {
-    // Forward to localhost:5000
-    let client = reqwest::Client::new();
-    // ... forwarding logic
-}
-```
-
-**Step 3: Users now access through SecureAPIs**
+**Step 3: Users access your API directly**
 ```bash
-# Public Internet Access
+# Direct access to your protected API
 curl https://api.example.com/api/users
      ↓
-   (SecureAPIs validates request)
+   (SecureAPIs middleware validates request)
      ↓
-curl http://localhost:5000/api/users
-     ↓
-   (Express processes)
+   (Express processes safe request)
 ```
 
 ## Monitoring & Operations

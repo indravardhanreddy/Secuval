@@ -120,14 +120,14 @@ async fn handler() -> &'static str {
 
 ## 🌍 Works with ANY Language!
 
-SecureAPIs works as a **standalone reverse proxy** in front of your API - it doesn't matter what language your backend is written in:
+SecureAPIs provides **language bindings and middleware** that integrate directly into your API - it doesn't matter what language your backend is written in:
 
 ```
-Client → SecureAPIs (Rust) → Your Backend (ANY Language)
-                              .NET, Java, Node.js, Python, Go, Ruby, PHP...
+Client → Your API (ANY Language) → SecureAPIs Middleware (Rust)
+         .NET, Java, Node.js, Python, Go, Ruby, PHP...
 ```
 
-**Zero code changes needed in your existing API!**
+**Native performance with zero code changes needed!**
 
 **Language-Specific Setup:**
 - **[Multi-Language Integration Guide](docs/MULTILANGUAGE_INTEGRATION.md)** - Complete explanation
@@ -155,12 +155,12 @@ Client → SecureAPIs (Rust) → Your Backend (ANY Language)
 - **[Full Deployment Guide](DEPLOYMENT_GUIDE.md)** - Production setup
 - **[Examples Guide](EXAMPLES.md)** - 10 working examples
 
-**Key Concept:** SecureAPIs is a **standalone reverse proxy** (like Nginx) that protects ANY backend:
+**Key Concept:** SecureAPIs provides **middleware and language bindings** that protect your API regardless of language:
 ```
-Client → SecureAPIs (Rust binary) → Your Backend (Any Language)
-         Security checks             .NET, Java, Python, Go...
+Client → Your API (Any Language) → SecureAPIs Middleware
+         .NET, Java, Python, Go...     Security checks
 ```
-Works with ANY language—zero code changes needed!
+Works with ANY language—native performance with minimal integration!
 
 **👉 New to SecureAPIs? Start with [docs/FAQ.md](docs/FAQ.md) - Most common questions answered!**
 
