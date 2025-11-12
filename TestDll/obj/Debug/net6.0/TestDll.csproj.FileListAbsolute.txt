@@ -1,0 +1,15 @@
+c:\projects\secureapis\TestDll\bin\Debug\net6.0\TestDll.exe
+c:\projects\secureapis\TestDll\bin\Debug\net6.0\TestDll.deps.json
+c:\projects\secureapis\TestDll\bin\Debug\net6.0\TestDll.runtimeconfig.json
+c:\projects\secureapis\TestDll\bin\Debug\net6.0\TestDll.dll
+c:\projects\secureapis\TestDll\bin\Debug\net6.0\TestDll.pdb
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.GeneratedMSBuildEditorConfig.editorconfig
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.AssemblyInfoInputs.cache
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.AssemblyInfo.cs
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.csproj.CoreCompileInputs.cache
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.sourcelink.json
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.dll
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\refint\TestDll.dll
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.pdb
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\TestDll.genruntimeconfig.cache
+c:\projects\secureapis\TestDll\obj\Debug\net6.0\ref\TestDll.dll

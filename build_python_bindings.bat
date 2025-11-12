@@ -7,7 +7,6 @@ echo ======================================
 REM Build the Rust library first
 echo.
 echo Building Rust library...
-cd ..\..
 cargo build --release
 if %errorlevel% neq 0 (
     echo ERROR: Failed to build Rust library

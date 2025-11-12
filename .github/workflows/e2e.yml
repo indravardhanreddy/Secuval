@@ -1,0 +1,306 @@
+name: End-to-End Testing
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      test_integration:
+        description: 'Run integration tests'
+        required: false
+        default: true
+        type: boolean
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  # Build and test Rust core
+  rust-build:
+    name: Build Rust Core
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            rust_target: x86_64-unknown-linux-gnu
+          - os: windows-latest
+            rust_target: x86_64-pc-windows-msvc
+          - os: macos-latest
+            rust_target: x86_64-apple-darwin
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        targets: ${{ matrix.rust_target }}
+
+    - name: Cache cargo registry
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/registry
+          ~/.cargo/git
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-cargo-
+
+    - name: Cache target directory
+      uses: actions/cache@v3
+      with:
+        path: target
+        key: ${{ runner.os }}-target-${{ hashFiles('**/Cargo.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-target-
+
+    - name: Build Rust library
+      run: cargo build --release --target ${{ matrix.rust_target }}
+
+    - name: Run Rust tests
+      run: cargo test --release --target ${{ matrix.rust_target }}
+
+    - name: Upload Rust artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: rust-lib-${{ matrix.os }}
+        path: |
+          target/${{ matrix.rust_target }}/release/secureapis.dll
+          target/${{ matrix.rust_target }}/release/libsecureapis.so
+          target/${{ matrix.rust_target }}/release/libsecureapis.dylib
+        if-no-files-found: warn
+
+  # Build and test C# bindings
+  csharp-bindings:
+    name: C# Bindings
+    runs-on: windows-latest
+    needs: rust-build
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Download Rust artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: rust-lib-windows-latest
+        path: target/x86_64-pc-windows-msvc/release/
+
+    - name: Build C# bindings
+      run: .\build_csharp_bindings.bat
+      working-directory: .
+
+    - name: Run C# tests
+      run: dotnet test bindings/csharp --verbosity minimal
+
+    - name: Upload C# artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: csharp-bindings
+        path: |
+          bindings/csharp/bin/Release/net8.0/
+          bindings/csharp/runtimes/
+        if-no-files-found: warn
+
+  # Build and test Java bindings
+  java-bindings:
+    name: Java Bindings
+    runs-on: ubuntu-latest
+    needs: rust-build
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Download Rust artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: rust-lib-ubuntu-latest
+        path: target/x86_64-unknown-linux-gnu/release/
+
+    - name: Build Java bindings
+      run: ./build_java_bindings.bat
+      working-directory: .
+
+    - name: Run Java tests
+      run: mvn test -q
+      working-directory: bindings/java
+
+    - name: Upload Java artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: java-bindings
+        path: bindings/java/target/
+        if-no-files-found: warn
+
+  # Build and test Node.js bindings
+  nodejs-bindings:
+    name: Node.js Bindings
+    runs-on: ubuntu-latest
+    needs: rust-build
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: bindings/nodejs/package-lock.json
+
+    - name: Download Rust artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: rust-lib-ubuntu-latest
+        path: target/x86_64-unknown-linux-gnu/release/
+
+    - name: Build Node.js bindings
+      run: ./build_nodejs_bindings.bat
+      working-directory: .
+
+    - name: Run Node.js tests
+      run: npm test
+      working-directory: bindings/nodejs
+
+    - name: Upload Node.js artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: nodejs-bindings
+        path: bindings/nodejs/build/
+        if-no-files-found: warn
+
+  # Build and test Python bindings
+  python-bindings:
+    name: Python Bindings
+    runs-on: ubuntu-latest
+    needs: rust-build
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Download Rust artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: rust-lib-ubuntu-latest
+        path: target/x86_64-unknown-linux-gnu/release/
+
+    - name: Build Python bindings
+      run: ./build_python_bindings.bat
+      working-directory: .
+
+    - name: Run Python tests
+      run: python test_secureapis.py
+      working-directory: bindings/python
+
+    - name: Upload Python artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-bindings
+        path: bindings/python/build/
+        if-no-files-found: warn
+
+  # Integration testing
+  integration-test:
+    name: Integration Tests
+    runs-on: windows-latest
+    needs: [csharp-bindings]
+    if: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.test_integration == 'true' }}
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Download C# bindings
+      uses: actions/download-artifact@v3
+      with:
+        name: csharp-bindings
+        path: bindings/csharp/
+
+    - name: Start test server
+      run: |
+        cd test_integration
+        dotnet run --project TestIntegration.csproj &
+        echo $! > server.pid
+      shell: bash
+
+    - name: Wait for server to start
+      run: |
+        for i in {1..30}; do
+          if curl -f http://localhost:5000/health 2>/dev/null; then
+            echo "Server is ready"
+            break
+          fi
+          echo "Waiting for server... ($i/30)"
+          sleep 2
+        done
+      shell: bash
+
+    - name: Run integration tests
+      run: python integration_test.py
+      working-directory: .
+
+    - name: Stop test server
+      run: |
+        if [ -f test_integration/server.pid ]; then
+          kill $(cat test_integration/server.pid) || true
+        fi
+      shell: bash
+      if: always()
+
+  # Final summary
+  e2e-summary:
+    name: E2E Test Summary
+    runs-on: ubuntu-latest
+    needs: [rust-build, csharp-bindings, java-bindings, nodejs-bindings, python-bindings, integration-test]
+    if: always()
+
+    steps:
+    - name: Check all jobs
+      run: |
+        echo "Rust Build: ${{ needs.rust-build.result }}"
+        echo "C# Bindings: ${{ needs.csharp-bindings.result }}"
+        echo "Java Bindings: ${{ needs.java-bindings.result }}"
+        echo "Node.js Bindings: ${{ needs.nodejs-bindings.result }}"
+        echo "Python Bindings: ${{ needs.python-bindings.result }}"
+        echo "Integration Tests: ${{ needs.integration-test.result }}"
+
+        if [[ "${{ needs.rust-build.result }}" == "success" && \
+              "${{ needs.csharp-bindings.result }}" == "success" && \
+              "${{ needs.java-bindings.result }}" == "success" && \
+              "${{ needs.nodejs-bindings.result }}" == "success" && \
+              "${{ needs.python-bindings.result }}" == "success" && \
+              ("${{ needs.integration-test.result }}" == "success" || "${{ needs.integration-test.result }}" == "skipped") ]]; then
+          echo "🎉 All E2E tests passed!"
+          exit 0
+        else
+          echo "❌ Some E2E tests failed"
+          exit 1
+        fi

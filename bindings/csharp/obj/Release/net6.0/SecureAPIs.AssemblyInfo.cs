@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("High-performance API security middleware for .NET")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+10c0b1425cfaa34265a4415a5d7e46c144dbc0d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+2e3810b3feb6efd795ae48acb74cda90ee92c28b")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecureAPIs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecureAPIs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]

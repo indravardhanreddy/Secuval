@@ -3,12 +3,27 @@
 //! This module exposes SecureAPIs functionality to other languages via C ABI.
 //! Used for creating language bindings (C#, Java, Node.js, etc.)
 
-use crate::config::SecurityConfig;
+use crate::config::{
+    SecurityConfig, RateLimitConfig, ValidationConfig, AuthConfig, MonitoringConfig,
+    ThreatDetectionConfig, HttpsConfig, CorsConfig, CsrfConfig, ContentTypeConfig
+};
 use crate::core::SecurityLayer;
 use std::ffi::{CStr, CString};
 use std::os::raw::c_char;
 use std::ptr;
 use serde_json;
+
+/// Simple config structure matching C# SecureAPIsConfig
+#[derive(serde::Deserialize)]
+#[serde(rename_all = "PascalCase")]
+struct SimpleConfig {
+    rate_limit_requests: i32,
+    rate_limit_window_seconds: i32,
+    jwt_secret: Option<String>,
+    enable_input_validation: bool,
+    enable_cors: bool,
+    enable_security_headers: bool,
+}
 
 /// Result of a security check
 #[repr(C)]
@@ -40,14 +55,69 @@ pub extern "C" fn secureapis_create_config(config_json: *const c_char) -> *mut S
         return ptr::null_mut();
     }
 
-    let config_str = match unsafe { CStr::from_ptr(config_json) }.to_str() {
+    // Convert C string to Rust string
+    let config_str = unsafe { CStr::from_ptr(config_json) }.to_str();
+    let config_str = match config_str {
         Ok(s) => s,
         Err(_) => return ptr::null_mut(),
     };
 
-    let config: SecurityConfig = match serde_json::from_str(config_str) {
-        Ok(c) => c,
-        Err(_) => return ptr::null_mut(),
+    // Try to parse as full SecurityConfig first
+    let config = if let Ok(full_config) = serde_json::from_str::<SecurityConfig>(config_str) {
+        full_config
+    } else {
+        // Fall back to simple C# config format
+        if let Ok(simple_config) = serde_json::from_str::<SimpleConfig>(config_str) {
+            SecurityConfig {
+                rate_limit: RateLimitConfig {
+                    enabled: true,
+                    requests_per_window: simple_config.rate_limit_requests as u32,
+                    window_duration: std::time::Duration::from_secs(simple_config.rate_limit_window_seconds as u64),
+                    burst_size: simple_config.rate_limit_requests as u32,
+                    per_ip: true,
+                    per_user: false,
+                    adaptive: false,
+                },
+                validation: ValidationConfig {
+                    enabled: simple_config.enable_input_validation,
+                    sql_injection_check: simple_config.enable_input_validation,
+                    xss_check: simple_config.enable_input_validation,
+                    command_injection_check: simple_config.enable_input_validation,
+                    path_traversal_check: simple_config.enable_input_validation,
+                    sanitize_input: simple_config.enable_input_validation,
+                    max_payload_size: 10 * 1024 * 1024,
+                    max_header_size: 8 * 1024,
+                },
+                auth: AuthConfig {
+                    enabled: simple_config.jwt_secret.is_some(),
+                    require_auth: simple_config.jwt_secret.is_some(),
+                    jwt_secret: simple_config.jwt_secret,
+                    api_keys: Vec::new(),
+                    token_expiry: std::time::Duration::from_secs(3600),
+                    refresh_enabled: false,
+                    mfa_enabled: false,
+                },
+                monitoring: MonitoringConfig::default(),
+                threat_detection: ThreatDetectionConfig::default(),
+                https: HttpsConfig::default(),
+                cors: CorsConfig {
+                    enabled: simple_config.enable_cors,
+                    allow_origins: vec!["*".to_string()],
+                    allow_all_origins: simple_config.enable_cors,
+                    allow_methods: vec!["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+                        .iter()
+                        .map(|s| s.to_string())
+                        .collect(),
+                    allow_headers: vec!["*".to_string()],
+                    allow_credentials: false,
+                    max_age: 86400,
+                },
+                csrf: CsrfConfig::default(),
+                content_type: ContentTypeConfig::default(),
+            }
+        } else {
+            return ptr::null_mut();
+        }
     };
 
     let security_layer = SecurityLayer::new(config);

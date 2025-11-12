@@ -9,28 +9,26 @@ echo.
 REM Build the Rust library first (required for all bindings)
 echo Building Rust core library...
 echo ===============================
-cd ..
 cargo build --release
 if %errorlevel% neq 0 (
     echo ERROR: Failed to build Rust library
     exit /b 1
 )
-cd bindings
 echo ✓ Rust library built successfully
 echo.
 
 REM Build C# bindings
 echo Building C# bindings...
 echo =======================
-if exist csharp (
-    cd csharp
-    call ..\build_csharp_bindings.bat
+if exist bindings\csharp (
+    cd bindings\csharp
+    call ..\..\build_csharp_bindings.bat
     if %errorlevel% neq 0 (
         echo WARNING: C# bindings build failed
     ) else (
         echo ✓ C# bindings built successfully
     )
-    cd ..
+    cd ..\..
 ) else (
     echo ⚠ C# bindings directory not found, skipping
 )
@@ -39,7 +37,7 @@ echo.
 REM Build Java bindings
 echo Building Java bindings...
 echo ========================
-if exist java (
+if exist bindings\java (
     call build_java_bindings.bat
     if %errorlevel% neq 0 (
         echo WARNING: Java bindings build failed
@@ -54,15 +52,15 @@ echo.
 REM Build Node.js bindings
 echo Building Node.js bindings...
 echo ===========================
-if exist nodejs (
-    cd nodejs
-    call ..\build_nodejs_bindings.bat
+if exist bindings\nodejs (
+    cd bindings\nodejs
+    call ..\..\build_nodejs_bindings.bat
     if %errorlevel% neq 0 (
         echo WARNING: Node.js bindings build failed
     ) else (
         echo ✓ Node.js bindings built successfully
     )
-    cd ..
+    cd ..\..
 ) else (
     echo ⚠ Node.js bindings directory not found, skipping
 )
@@ -71,7 +69,7 @@ echo.
 REM Build Python bindings
 echo Building Python bindings...
 echo ==========================
-if exist python (
+if exist bindings\python (
     call build_python_bindings.bat
     if %errorlevel% neq 0 (
         echo WARNING: Python bindings build failed

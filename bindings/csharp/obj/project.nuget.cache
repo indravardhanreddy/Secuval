@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "jlIsf9Jeepc=",
+  "dgSpecHash": "SQZPYl0RbIeFZbtxqjAtTbZCbP4U4+SYahfC0nE/PuXsaNQX3zTx2DvweItlExNzOVzwQdyeM2hki+TAHx/ZlA==",
   "success": true,
   "projectFilePath": "C:\\projects\\secureapis\\bindings\\csharp\\SecureAPIs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\moram\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\moram\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512"
   ],
   "logs": []
 }

@@ -6,7 +6,7 @@
 param(
     [int]$TotalRequests = 100000,
     [int]$ParallelJobs = 10,
-    [string]$TargetUrl = "http://localhost:3000",
+    [string]$TargetUrl = "http://localhost:8001",
     [switch]$Verbose
 )
 

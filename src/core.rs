@@ -175,6 +175,8 @@ impl SecurityLayer {
         &self,
         request: &Request<B>,
     ) -> SecurityResult<SecurityContext>
+    where
+        B: AsRef<str>,
     {
         // Extract client IP
         let client_ip = self.extract_client_ip(request);
@@ -348,7 +350,10 @@ impl SecurityLayer {
     pub fn process_request_sync<B>(
         &self,
         request: &Request<B>,
-    ) -> SecurityResult<SecurityContext> {
+    ) -> SecurityResult<SecurityContext>
+    where
+        B: AsRef<str>,
+    {
         // Create a runtime for executing async code synchronously
         let rt = tokio::runtime::Runtime::new().unwrap();
         rt.block_on(self.process_request(request))
@@ -375,7 +380,10 @@ impl SecurityLayer {
         &self,
         request: &Request<B>,
         context: &mut SecurityContext,
-    ) -> SecurityResult<()> {
+    ) -> SecurityResult<()>
+    where
+        B: AsRef<str>,
+    {
         // Smart threat detection based on request patterns
         let uri = request.uri().to_string();
         let uri_lower = uri.to_lowercase();

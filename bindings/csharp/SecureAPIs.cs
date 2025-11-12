@@ -1,5 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Text.Json;
+using System.IO;
+using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
 
@@ -61,11 +63,25 @@ public class SecureAPIs : IDisposable
     private IntPtr _securityLayer;
     private bool _disposed = false;
 
+    static SecureAPIs()
+    {
+        // Set the DLL directory to ensure the native library is found
+        string assemblyDir = Path.GetDirectoryName(typeof(SecureAPIs).Assembly.Location) ?? AppContext.BaseDirectory;
+        string dllDir = Path.Combine(assemblyDir, "runtimes", "win-x64", "native");
+        if (Directory.Exists(dllDir))
+        {
+            SetDllDirectory(dllDir);
+        }
+    }
+
+    [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+    private static extern bool SetDllDirectory(string lpPathName);
+
     // P/Invoke declarations
-    [DllImport("secureapis", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("C:\\projects\\secureapis\\bindings\\csharp\\runtimes\\win-x64\\native\\secureapis.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "secureapis_create_config")]
     private static extern IntPtr secureapis_create_config(IntPtr configJson);
 
-    [DllImport("secureapis", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("C:\\projects\\secureapis\\bindings\\csharp\\runtimes\\win-x64\\native\\secureapis.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "secureapis_check_request")]
     private static extern IntPtr secureapis_check_request(
         IntPtr securityLayer,
         IntPtr method,
@@ -74,13 +90,13 @@ public class SecureAPIs : IDisposable
         IntPtr body,
         IntPtr ip);
 
-    [DllImport("secureapis", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("C:\\projects\\secureapis\\bindings\\csharp\\runtimes\\win-x64\\native\\secureapis.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "secureapis_free_security_layer")]
     private static extern void secureapis_free_security_layer(IntPtr securityLayer);
 
-    [DllImport("secureapis", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("C:\\projects\\secureapis\\bindings\\csharp\\runtimes\\win-x64\\native\\secureapis.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "secureapis_free_result")]
     private static extern void secureapis_free_result(IntPtr result);
 
-    [DllImport("secureapis", CallingConvention = CallingConvention.Cdecl)]
+    [DllImport("C:\\projects\\secureapis\\bindings\\csharp\\runtimes\\win-x64\\native\\secureapis.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "secureapis_free_string")]
     private static extern void secureapis_free_string(IntPtr str);
 
     /// <summary>
@@ -127,6 +143,12 @@ public class SecureAPIs : IDisposable
         string body = "";
         if (request.ContentLength > 0 && request.Body != null)
         {
+            // Reset position to beginning in case it was read before
+            if (request.Body.CanSeek)
+            {
+                request.Body.Position = 0;
+            }
+
             using var reader = new StreamReader(request.Body);
             body = reader.ReadToEnd();
         }

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "EHw4lm/61b0=",
+  "success": true,
+  "projectFilePath": "C:\\projects\\secureapis\\test_integration\\TestIntegration.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
