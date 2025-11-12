@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ConfigTest/1.0.0": {
+        "dependencies": {
+          "SecureAPIs": "0.1.0.0"
+        },
+        "runtime": {
+          "ConfigTest.dll": {}
+        }
+      },
+      "SecureAPIs/0.1.0.0": {
+        "runtime": {
+          "SecureAPIs.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConfigTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SecureAPIs/0.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

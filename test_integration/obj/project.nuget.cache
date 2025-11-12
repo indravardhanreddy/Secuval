@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "EHw4lm/61b0=",
+  "dgSpecHash": "iVAa/kVZDrVfoIz8Ra9fvunpodSFgYKZLHbx8gE+uQT1rRc+/8ng1TZHLGrUiWLZ9JNjWd4l5zgH91xOkINIPw==",
   "success": true,
-  "projectFilePath": "C:\\projects\\secureapis\\test_integration\\TestIntegration.csproj",
+  "projectFilePath": "C:\\projects\\secureapis\\test_integration\\ConfigTest.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\moram\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\moram\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.31\\microsoft.netcore.app.host.win-x64.6.0.31.nupkg.sha512"
   ],
   "logs": []
 }

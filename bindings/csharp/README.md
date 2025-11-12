@@ -179,9 +179,172 @@ public class CreateUserRequest
 }
 ```
 
-## Security Features
+## Dynamic Configuration (NEW)
 
-SecureAPIs automatically provides:
+SecureAPIs now supports multiple configuration sources for maximum flexibility:
+
+### Configuration Sources (in order of precedence)
+
+1. **Environment Variables** (highest precedence)
+2. **JSON Configuration File**
+3. **ASP.NET Core IConfiguration**
+4. **Code-based Configuration** (lowest precedence)
+
+### JSON Configuration File
+
+Create a `secureapis.config.json` file in your application directory:
+
+```json
+{
+  "rateLimitRequests": 100,
+  "rateLimitWindowSeconds": 60,
+  "enableRateLimiting": true,
+  "enableInputValidation": true,
+  "enableSqlInjectionDetection": true,
+  "enableXssDetection": true,
+  "enableThreatDetection": true,
+  "enableSecurityHeaders": true,
+  "enableLogging": true,
+  "logLevel": "Info"
+}
+```
+
+#### Usage in ASP.NET Core
+
+```csharp
+// Option 1: Load from JSON file
+app.UseSecureAPIs("secureapis.config.json");
+
+// Option 2: Load from default location (secureapis.config.json in app directory)
+app.UseSecureAPIs();
+```
+
+### Environment Variables
+
+Set environment variables with the `SECUREAPIS_` prefix:
+
+```bash
+# Rate limiting
+export SECUREAPIS_RATE_LIMIT_REQUESTS=50
+export SECUREAPIS_RATE_LIMIT_WINDOW_SECONDS=30
+export SECUREAPIS_ENABLE_RATE_LIMITING=true
+
+# Authentication
+export SECUREAPIS_JWT_SECRET="your-secret"
+export SECUREAPIS_ENABLE_JWT_VALIDATION=true
+export SECUREAPIS_API_KEYS="key1,key2,key3"
+
+# Threat detection
+export SECUREAPIS_BLOCKED_IPS="192.168.1.100,10.0.0.1"
+export SECUREAPIS_ENABLE_THREAT_DETECTION=true
+```
+
+### ASP.NET Core Configuration
+
+Configure via `appsettings.json`:
+
+```json
+{
+  "SecureAPIs": {
+    "rateLimitRequests": 200,
+    "enableRateLimiting": true,
+    "enableInputValidation": true,
+    "blockedIPs": ["192.168.1.100"]
+  }
+}
+```
+
+#### Usage in ASP.NET Core
+
+```csharp
+// Load from IConfiguration
+app.UseSecureAPIs(Configuration);
+```
+
+### Configuration Priority
+
+When multiple configuration sources are used, they are merged in this order:
+
+1. **Environment Variables** override everything
+2. **JSON File** settings are used where environment variables don't specify
+3. **IConfiguration** settings fill in remaining gaps
+4. **Code-based** configuration provides defaults
+
+### Complete Dynamic Configuration Example
+
+```csharp
+// Program.cs or Startup.cs
+using SecureAPIs;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+// Configure SecureAPIs with multiple sources
+// 1. Load from JSON file if it exists
+// 2. Override with environment variables
+// 3. Use ASP.NET Core configuration as fallback
+app.UseSecureAPIs("secureapis.config.json");
+
+app.UseAuthorization();
+app.MapControllers();
+
+app.Run();
+```
+
+### All Configuration Properties
+
+#### Rate Limiting
+- `rateLimitRequests`: Maximum requests per window (default: 100)
+- `rateLimitWindowSeconds`: Time window in seconds (default: 60)
+- `enableRateLimiting`: Enable/disable rate limiting (default: true)
+
+#### Authentication
+- `jwtSecret`: JWT signing secret
+- `jwtIssuer`: JWT issuer claim
+- `jwtAudience`: JWT audience claim
+- `enableJwtValidation`: Enable JWT validation (default: false)
+- `apiKeys`: List of valid API keys
+
+#### Input Validation
+- `enableInputValidation`: Enable input validation (default: true)
+- `enableSqlInjectionDetection`: Detect SQL injection (default: true)
+- `enableXssDetection`: Detect XSS attacks (default: true)
+- `enableCommandInjectionDetection`: Detect command injection (default: true)
+- `enablePathTraversalDetection`: Detect path traversal (default: true)
+- `maxRequestBodySize`: Maximum request body size in bytes (default: 1MB)
+- `maxUrlLength`: Maximum URL length (default: 2048)
+
+#### CORS
+- `enableCors`: Enable CORS validation (default: false)
+- `allowedOrigins`: List of allowed origins
+- `allowedMethods`: List of allowed HTTP methods
+- `allowedHeaders`: List of allowed headers
+
+#### Security Headers
+- `enableSecurityHeaders`: Add security headers (default: true)
+- `enableHsts`: Enable HSTS header (default: true)
+- `enableCsp`: Enable Content Security Policy (default: false)
+- `cspPolicy`: Custom CSP policy string
+
+#### Threat Detection
+- `enableThreatDetection`: Enable threat detection (default: true)
+- `blockedIPs`: List of blocked IP addresses
+- `blockedUserAgents`: List of blocked user agents
+- `maxRequestsPerMinute`: Maximum requests per minute (default: 60)
+
+#### Logging & Monitoring
+- `enableLogging`: Enable logging (default: true)
+- `logLevel`: Log level (Info, Debug, Warn, Error)
+- `enableMetrics`: Enable metrics collection (default: true)
+
+#### Advanced
+- `strictMode`: Enable strict security mode (default: false)
+- `requestTimeoutSeconds`: Request timeout in seconds (default: 30)
+- `enableIpReputation`: Enable IP reputation checking (default: false)
 
 ### Rate Limiting
 - **Config:** `RateLimitRequests` and `RateLimitWindowSeconds`

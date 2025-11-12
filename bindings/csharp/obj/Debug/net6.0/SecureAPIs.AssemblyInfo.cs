@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("High-performance API security middleware for .NET")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+2e3810b3feb6efd795ae48acb74cda90ee92c28b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0+dc55d461210d5371af615ce9870f165d1c21e3c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecureAPIs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecureAPIs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]

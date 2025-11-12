@@ -1,0 +1,6 @@
+C:\projects\secureapis\test_integration\obj\Debug\net6.0\ConfigTest.csproj.AssemblyReference.cache
+C:\projects\secureapis\test_integration\obj\Debug\net6.0\ConfigTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\secureapis\test_integration\obj\Debug\net6.0\ConfigTest.AssemblyInfoInputs.cache
+C:\projects\secureapis\test_integration\obj\Debug\net6.0\ConfigTest.AssemblyInfo.cs
+C:\projects\secureapis\test_integration\obj\Debug\net6.0\ConfigTest.csproj.CoreCompileInputs.cache
+C:\projects\secureapis\test_integration\obj\Debug\net6.0\ConfigTest.sourcelink.json

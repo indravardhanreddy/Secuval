@@ -192,7 +192,6 @@ impl InputValidator {
             Regex::new(r"(?i)syscolumns").unwrap(), // syscolumns
             // Simple patterns for common attacks
             Regex::new(r"(?i)' or '").unwrap(), // ' OR '
-            Regex::new(r"(?i)or").unwrap(), // Any "or" - for testing
         ]
     }
 

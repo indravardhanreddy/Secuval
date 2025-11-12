@@ -32,10 +32,7 @@
           "Microsoft.Extensions.Options": "6.0.0"
         },
         "runtime": {
-          "SecureAPIs.dll": {
-            "assemblyVersion": "0.1.0.0",
-            "fileVersion": "0.1.0.0"
-          }
+          "SecureAPIs.dll": {}
         }
       }
     }

@@ -1,0 +1,56 @@
+{
+  "rateLimitRequests": 100,
+  "rateLimitWindowSeconds": 60,
+  "enableRateLimiting": true,
+  "jwtSecret": "your-jwt-secret-here",
+  "jwtIssuer": "your-app",
+  "jwtAudience": "your-users",
+  "enableJwtValidation": false,
+  "apiKeys": [
+    "api-key-1",
+    "api-key-2"
+  ],
+  "enableInputValidation": true,
+  "enableSqlInjectionDetection": true,
+  "enableXssDetection": true,
+  "enableCommandInjectionDetection": true,
+  "enablePathTraversalDetection": true,
+  "maxRequestBodySize": 1048576,
+  "maxUrlLength": 2048,
+  "enableCors": false,
+  "allowedOrigins": [
+    "https://yourdomain.com",
+    "https://app.yourdomain.com"
+  ],
+  "allowedMethods": [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE"
+  ],
+  "allowedHeaders": [
+    "Content-Type",
+    "Authorization",
+    "X-API-Key"
+  ],
+  "enableSecurityHeaders": true,
+  "enableHsts": true,
+  "enableCsp": false,
+  "cspPolicy": "default-src 'self'; script-src 'self' 'unsafe-inline';",
+  "enableThreatDetection": true,
+  "blockedIPs": [
+    "192.168.1.100",
+    "10.0.0.1"
+  ],
+  "blockedUserAgents": [
+    "bad-bot",
+    "malicious-scanner"
+  ],
+  "maxRequestsPerMinute": 60,
+  "enableLogging": true,
+  "logLevel": "Info",
+  "enableMetrics": true,
+  "strictMode": false,
+  "requestTimeoutSeconds": 30,
+  "enableIpReputation": false
+}

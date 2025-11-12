@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
+using System;
 
 namespace SecureAPIs;
 
@@ -36,7 +38,8 @@ public class SecureAPIsMiddleware
             var errorResponse = new
             {
                 error = result.ErrorMessage ?? "Request blocked by security policy",
-                statusCode = result.StatusCode
+                statusCode = result.StatusCode,
+                timestamp = DateTime.UtcNow
             };
 
             await context.Response.WriteAsJsonAsync(errorResponse);
@@ -74,12 +77,13 @@ public class SecureAPIsMiddleware
 public static class SecureAPIsMiddlewareExtensions
 {
     /// <summary>
-    /// Add SecureAPIs middleware to the pipeline
+    /// Add SecureAPIs middleware with default configuration
     /// </summary>
     public static IApplicationBuilder UseSecureAPIs(
         this IApplicationBuilder builder)
     {
-        return builder.UseMiddleware<SecureAPIsMiddleware>();
+        var config = SecureAPIsConfig.Load();
+        return builder.UseSecureAPIs(config);
     }
 
     /// <summary>
@@ -92,6 +96,41 @@ public static class SecureAPIsMiddlewareExtensions
         var config = new SecureAPIsConfig();
         configure(config);
 
+        builder.UseMiddleware<SecureAPIsMiddleware>(
+            Options.Create(config));
+
+        return builder;
+    }
+
+    /// <summary>
+    /// Add SecureAPIs middleware with configuration from JSON file
+    /// </summary>
+    public static IApplicationBuilder UseSecureAPIs(
+        this IApplicationBuilder builder,
+        string configFilePath)
+    {
+        var config = SecureAPIsConfig.Load(configFilePath);
+        return builder.UseSecureAPIs(config);
+    }
+
+    /// <summary>
+    /// Add SecureAPIs middleware with configuration from IConfiguration
+    /// </summary>
+    public static IApplicationBuilder UseSecureAPIs(
+        this IApplicationBuilder builder,
+        IConfiguration configuration)
+    {
+        var config = SecureAPIsConfig.FromConfiguration(configuration);
+        return builder.UseSecureAPIs(config);
+    }
+
+    /// <summary>
+    /// Add SecureAPIs middleware with configuration object
+    /// </summary>
+    public static IApplicationBuilder UseSecureAPIs(
+        this IApplicationBuilder builder,
+        SecureAPIsConfig config)
+    {
         builder.UseMiddleware<SecureAPIsMiddleware>(
             Options.Create(config));
 

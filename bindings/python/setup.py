@@ -62,6 +62,10 @@ setup(
     author_email="",
     url="https://github.com/secureapis/secureapis",
     packages=find_packages(),
+    package_data={
+        'secureapis': ['*.dll', '*.so', '*.dylib', '*.config.json'],
+    },
+    include_package_data=True,
     cmdclass={
         'build_py': BuildRustLibrary,
     },

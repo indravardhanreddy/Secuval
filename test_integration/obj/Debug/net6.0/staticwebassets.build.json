@@ -1,1 +1,11 @@
-{"Version":1,"Hash":"xHJL3FvmXSUKvk6RhHbzXFun4CZXfc5w2C3nTUDjZso=","Source":"TestIntegration","BasePath":"_content/TestIntegration","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
+{
+  "Version": 1,
+  "Hash": "sSwd4Ea64OBFm6Q713tMdjBvi2R8s0LaMhXD2UCIW8c=",
+  "Source": "TestIntegration",
+  "BasePath": "_content/TestIntegration",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

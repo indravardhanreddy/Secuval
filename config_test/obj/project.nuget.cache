@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "goPhhlZqYcLPEh08Li49PSWrmZrQwl1fMhx/FY29V3KDLaOUw2MweEMzRsxwWhxuAzlneHkLSVdFcackAcXpYA==",
+  "success": true,
+  "projectFilePath": "C:\\projects\\secureapis\\config_test\\ConfigTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.31\\microsoft.netcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.31\\microsoft.windowsdesktop.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.31\\microsoft.aspnetcore.app.ref.6.0.31.nupkg.sha512",
+    "C:\\Users\\moram\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.31\\microsoft.netcore.app.host.win-x64.6.0.31.nupkg.sha512"
+  ],
+  "logs": []
+}

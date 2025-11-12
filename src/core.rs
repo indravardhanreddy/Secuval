@@ -259,7 +259,7 @@ impl SecurityLayer {
 
         // 3. Input validation
         if self.config.validation.enabled {
-            if let Err(_) = self.validator.validate_request(request, &mut context).await {
+            if let Err(e) = self.validator.validate_request(request, &mut context).await {
                 // Validation failed
                 if let Some(ui_state) = &self.ui_state {
                     ui_state.validation_failures.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
@@ -281,10 +281,7 @@ impl SecurityLayer {
                     };
                     ui_state.add_request_log(log).await;
                 }
-                return Err(SecurityError::InvalidInput {
-                    reason: "Input validation failed".to_string(),
-                    field: None,
-                });
+                return Err(e); // Propagate the original validation error
             }
         }
 
